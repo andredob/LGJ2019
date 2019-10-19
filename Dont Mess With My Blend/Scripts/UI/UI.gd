@@ -8,12 +8,23 @@ get_node("InventoryPanel/Items/Item3"),
 get_node("InventoryPanel/Items/Item4")
 ]
 
+onready var pause = get_node("Pause")
+
 onready var leftButtonLabel = get_node("LeftScreen/Label")
 onready var rightButtonLabel = get_node("RightScreen/Label")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
+	if(Input.is_action_just_pressed("ui_cancel")):
+		print("pause"+str(get_tree().paused))
+		if(get_tree().paused):
+			get_tree().paused = false
+			pause.visible = false
+		else:
+			get_tree().paused = true
+			pause.visible = true
+		
 	match GameManager.screenCamera:
 		"left":
 			rightButtonLabel.text = "Sala do Caldeirão"
@@ -22,6 +33,7 @@ func _process(delta):
 		"center":
 			rightButtonLabel.text = "Sala de Corte"
 			leftButtonLabel.text = "Sala do Forno"
+			
 	var cont = 0
 	for item in items:
 		var itemData = GameManager.inventario[cont]
@@ -75,4 +87,17 @@ func _on_RightScreenButton_button_down():
 		GameManager.screenCamera = "center"
 	else:
 		GameManager.screenCamera = "right"
+	pass # Replace with function body.
+
+
+func _on_ButtonContinuar_button_down():
+	get_tree().paused = false
+	pause.visible = false
+	pass # Replace with function body.
+
+
+func _on_ButtonMenu_button_down():
+	get_tree().paused = false
+	pause.visible = false
+	get_tree().change_scene("res://Scenes/MainMenu.tscn")
 	pass # Replace with function body.
