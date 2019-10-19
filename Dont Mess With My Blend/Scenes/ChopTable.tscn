@@ -1,10 +1,46 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Scripts/ChopTable/ChopTable.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/TestSprites/ChopTable/table.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/TestSprites/ChopTable/table-frog.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/TestSprites/ChopTable/frog.png" type="Texture" id=4]
-[ext_resource path="res://Scripts/ChopTable/frog.gd" type="Script" id=5]
+[ext_resource path="res://Sprites/Snake/AmareloBola.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Snake/AmareloListra.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Snake/AzulBola.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Snake/AzulListra.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Frog/AzulBola.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Frog/AzulListra.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Frog/VerdeBola.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Frog/VerdeListra.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Bat/MorcegoAmareloBolinha.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Bat/MorcegoAmareloListra.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Bat/MorcegoMarronBola.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Bat/MorcegoMarronListra.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/TestSprites/ChopTable/frog.png" type="Texture" id=16]
+[ext_resource path="res://Scripts/ChopTable/frog.gd" type="Script" id=17]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="ChopTable" type="Node2D"]
 script = ExtResource( 1 )
@@ -15,21 +51,43 @@ default_color = Color( 0.4, 0.501961, 1, 1 )
 texture_mode = 0
 
 [node name="table" type="Sprite" parent="."]
-position = Vector2( 662.449, 533.963 )
+position = Vector2( 669.986, 452.567 )
 scale = Vector2( 1.133, 0.698893 )
 texture = ExtResource( 2 )
 
 [node name="table-frog" type="Sprite" parent="table"]
+visible = false
 position = Vector2( -47.1272, -8.57861 )
 rotation = 1.5708
 scale = Vector2( 0.520481, 0.680727 )
 texture = ExtResource( 3 )
 
+[node name="Snake" type="AnimatedSprite" parent="table"]
+editor/display_folded = true
+visible = false
+position = Vector2( 0, -1.84912 )
+frames = SubResource( 1 )
+
+[node name="reference" type="Sprite" parent="table/Snake"]
+
+[node name="Frog" type="AnimatedSprite" parent="table"]
+editor/display_folded = true
+visible = false
+frames = SubResource( 2 )
+
+[node name="reference" type="Sprite" parent="table/Frog"]
+
+[node name="Bat" type="AnimatedSprite" parent="table"]
+editor/display_folded = true
+frames = SubResource( 3 )
+
+[node name="reference" type="Sprite" parent="table/Bat"]
+
 [node name="frog" type="Sprite" parent="."]
 position = Vector2( 1194.12, 72.8998 )
 scale = Vector2( 0.191417, 0.223753 )
-texture = ExtResource( 4 )
-script = ExtResource( 5 )
+texture = ExtResource( 16 )
+script = ExtResource( 17 )
 
 [node name="Button" type="Button" parent="frog"]
 margin_left = -405.454
