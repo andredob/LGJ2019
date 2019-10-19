@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/potion 5.png-9a867e209bfb0acc26a7537b3b37b055.stex"
+path="res://.import/1571510221340.png-d793ba875c85e5cb387e297459516f66.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Potions/potion 5.png"
-dest_files=[ "res://.import/potion 5.png-9a867e209bfb0acc26a7537b3b37b055.stex" ]
+source_file="res://Sprites/Potions/1571510221340.png"
+dest_files=[ "res://.import/1571510221340.png-d793ba875c85e5cb387e297459516f66.stex" ]
 
 [params]
 

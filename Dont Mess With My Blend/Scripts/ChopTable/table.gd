@@ -27,7 +27,7 @@ func _input(event):
 	if event is InputEventMouseButton:
 		print(actualPoint)
 		lastPoint = actualPoint
-		actualPoint = event.position
+		actualPoint = event.relative
 		if !mousePressed :
 			mousePressed = true
 		else:

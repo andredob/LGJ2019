@@ -2,8 +2,8 @@
 
 [ext_resource path="res://Scripts/ChopTable/ChopTable.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/TestSprites/ChopTable/table.png" type="Texture" id=2]
-[ext_resource path="res://Scripts/ChopTable/table.gd" type="Script" id=3]
-[ext_resource path="res://Sprites/TestSprites/ChopTable/table-frog.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/TestSprites/ChopTable/table-frog.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/ChopTable/knife.gd" type="Script" id=4]
 [ext_resource path="res://Sprites/TestSprites/ChopTable/frog.png" type="Texture" id=5]
 [ext_resource path="res://Scripts/ChopTable/frog.gd" type="Script" id=6]
 
@@ -14,18 +14,21 @@ script = ExtResource( 1 )
 position = Vector2( 660.177, 536.236 )
 scale = Vector2( 1.133, 0.698893 )
 texture = ExtResource( 2 )
-script = ExtResource( 3 )
 
 [node name="table-frog" type="Sprite" parent="table"]
 position = Vector2( -47.1272, -8.57861 )
 rotation = 1.5708
 scale = Vector2( 0.520481, 0.680727 )
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 
 [node name="Line2D" type="Line2D" parent="table"]
 points = PoolVector2Array( -173.766, -44.9069 )
 default_color = Color( 0.764706, 0.14902, 0.0862745, 1 )
 texture_mode = 0
+script = ExtResource( 4 )
+
+[node name="Timer" type="Timer" parent="table/Line2D"]
+wait_time = 0.05
 
 [node name="frog" type="Sprite" parent="."]
 position = Vector2( 1194.12, 72.8998 )
@@ -40,6 +43,7 @@ margin_right = 425.546
 margin_bottom = 302.858
 flat = true
 [connection signal="draw" from="table/table-frog" to="table" method="_on_tablefrog_draw"]
+[connection signal="timeout" from="table/Line2D/Timer" to="table/Line2D" method="_on_Timer_timeout"]
 [connection signal="script_changed" from="frog" to="." method="_on_frog_script_changed"]
 [connection signal="button_down" from="frog/Button" to="frog" method="_on_Button_button_down"]
 [connection signal="button_down" from="frog/Button" to="." method="_on_Button_button_down"]

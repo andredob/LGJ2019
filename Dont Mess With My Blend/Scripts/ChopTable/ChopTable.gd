@@ -3,7 +3,7 @@ var defaultIcon = preload("res://icon.png")
 
 var aux = [
 {"sprite": "dafaultIcon"}
-] 
+]
 
 var itens = [
 {"name": "frog", "sprite": "frog"}
