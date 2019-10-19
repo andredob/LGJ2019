@@ -1,12 +1,9 @@
 extends Node
+var defaultIcon = preload("res://icon.png")
 
 var inventario = [
-{"nome": "Perna esquerda de sapo", "sprite": "", "qtd": 1},
-{"nome": "", "sprite": "", "qtd": 0}, 
-{"nome": "", "sprite": "", "qtd": 0}, 
-{"nome": "", "sprite": "", "qtd": 0}, 
-{"nome": "", "sprite": "", "qtd": 0}, 
-{"nome": "", "sprite": "", "qtd": 0},
-{"nome": "", "sprite": "", "qtd": 0}, 
-{"nome": "", "sprite": "", "qtd": 0} 
+{"nome": "Perna esquerda de sapo", "sprite": defaultIcon, "qtd": 1},
+{"nome": "Perna esquerda de sapo", "sprite": defaultIcon, "qtd": 1},
+{"nome": "Perna esquerda de sapo", "sprite": defaultIcon, "qtd": 1},
+{"nome": "Perna esquerda de sapo", "sprite": defaultIcon, "qtd": 1}, 
 ]
