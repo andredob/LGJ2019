@@ -79,22 +79,75 @@ frames = SubResource( 2 )
 
 [node name="Bat" type="AnimatedSprite" parent="table"]
 editor/display_folded = true
+visible = false
 frames = SubResource( 3 )
 
 [node name="reference" type="Sprite" parent="table/Bat"]
 
-[node name="frog" type="Sprite" parent="."]
+[node name="Shelf" type="Sprite" parent="."]
+
+[node name="frog" type="Sprite" parent="Shelf"]
+editor/display_folded = true
 position = Vector2( 1194.12, 72.8998 )
 scale = Vector2( 0.191417, 0.223753 )
 texture = ExtResource( 16 )
 script = ExtResource( 17 )
 
-[node name="Button" type="Button" parent="frog"]
+[node name="Button" type="Button" parent="Shelf/frog"]
 margin_left = -405.454
 margin_top = -313.222
 margin_right = 425.546
 margin_bottom = 296.778
 flat = true
-[connection signal="script_changed" from="frog" to="." method="_on_frog_script_changed"]
-[connection signal="button_down" from="frog/Button" to="frog" method="_on_Button_button_down"]
-[connection signal="button_down" from="frog/Button" to="." method="_on_Button_button_down"]
+
+[node name="bat" type="Sprite" parent="Shelf"]
+editor/display_folded = true
+position = Vector2( 928.562, 74.57 )
+scale = Vector2( 0.191417, 0.223753 )
+texture = ExtResource( 16 )
+script = ExtResource( 17 )
+
+[node name="Button" type="Button" parent="Shelf/bat"]
+margin_left = -405.0
+margin_top = -297.0
+margin_right = 405.0
+margin_bottom = 313.0
+flat = true
+
+[node name="snake" type="Sprite" parent="Shelf"]
+editor/display_folded = true
+position = Vector2( 621.248, 74.57 )
+scale = Vector2( 0.191417, 0.223753 )
+texture = ExtResource( 16 )
+script = ExtResource( 17 )
+
+[node name="Button" type="Button" parent="Shelf/snake"]
+margin_left = -405.0
+margin_top = -307.0
+margin_right = 412.0
+margin_bottom = 303.0
+flat = true
+
+[node name="spider" type="Sprite" parent="Shelf"]
+editor/display_folded = true
+position = Vector2( 328.967, 82.9209 )
+scale = Vector2( 0.191417, 0.223753 )
+texture = ExtResource( 16 )
+script = ExtResource( 17 )
+
+[node name="Button" type="Button" parent="Shelf/spider"]
+margin_left = -405.454
+margin_top = -313.222
+margin_right = 425.546
+margin_bottom = 296.778
+flat = true
+[connection signal="script_changed" from="Shelf/frog" to="." method="_on_frog_script_changed"]
+[connection signal="button_down" from="Shelf/frog/Button" to="Shelf/frog" method="_on_Button_button_down"]
+[connection signal="button_down" from="Shelf/frog/Button" to="." method="_on_Button_button_down" binds= [ "frog" ]]
+[connection signal="script_changed" from="Shelf/bat" to="." method="_on_frog_script_changed"]
+[connection signal="button_down" from="Shelf/bat/Button" to="." method="_on_Button_button_down" binds= [ "bat" ]]
+[connection signal="script_changed" from="Shelf/snake" to="." method="_on_frog_script_changed"]
+[connection signal="button_down" from="Shelf/snake/Button" to="." method="_on_Button_button_down" binds= [ "snake" ]]
+[connection signal="script_changed" from="Shelf/spider" to="." method="_on_frog_script_changed"]
+[connection signal="button_down" from="Shelf/spider/Button" to="." method="_on_Button_button_down" binds= [ "spider" ]]
+[connection signal="button_down" from="Shelf/spider/Button" to="Shelf/spider" method="_on_Button_button_down"]
