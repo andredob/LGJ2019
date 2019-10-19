@@ -19,10 +19,6 @@ func _process(delta):
 func _ready():
 	pass
 
-
-
-
-
 func _on_Button_button_down():
 	get_child(0).get_child(0).visible = true
 	pass # Replace with function body.

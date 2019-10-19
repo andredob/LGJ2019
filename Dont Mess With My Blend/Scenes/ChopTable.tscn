@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scripts/ChopTable/ChopTable.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/TestSprites/ChopTable/table.png" type="Texture" id=2]
-[ext_resource path="res://Scripts/ChopTable/table.gd" type="Script" id=3]
+[ext_resource path="res://Sprites/TestSprites/ChopTable/table-frog.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/TestSprites/ChopTable/frog.png" type="Texture" id=4]
 [ext_resource path="res://Scripts/ChopTable/frog.gd" type="Script" id=5]
 
@@ -10,19 +10,19 @@
 script = ExtResource( 1 )
 
 [node name="table" type="Sprite" parent="."]
-position = Vector2( 675.141, 553.013 )
+position = Vector2( 660.177, 539.409 )
 scale = Vector2( 1.133, 0.698893 )
 texture = ExtResource( 2 )
-script = ExtResource( 3 )
 
-[node name="frog" type="Sprite" parent="table"]
-visible = false
-position = Vector2( -7.99438, -12.8625 )
+[node name="table-frog" type="Sprite" parent="table"]
+position = Vector2( -16.0154, -6.87769 )
 rotation = 1.5708
-scale = Vector2( 0.475215, 0.425479 )
-texture = ExtResource( 4 )
+scale = Vector2( 0.520481, 0.680727 )
+texture = ExtResource( 3 )
 
 [node name="frog" type="Sprite" parent="."]
+editor/display_folded = true
+visible = false
 position = Vector2( 1194.12, 72.8998 )
 scale = Vector2( 0.191417, 0.223753 )
 texture = ExtResource( 4 )
