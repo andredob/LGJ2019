@@ -452,6 +452,7 @@ anchor_bottom = 1.0
 rect_pivot_offset = Vector2( 640, 360 )
 
 [node name="Pause" type="Panel" parent="."]
+visible = false
 margin_left = 509.0
 margin_top = 246.0
 margin_right = 771.0
