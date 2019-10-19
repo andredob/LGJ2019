@@ -2,10 +2,10 @@ extends Control
 
 #items do inventário
 onready var items = [
-get_node("Panel/Items/Item1"),
-get_node("Panel/Items/Item2"),
-get_node("Panel/Items/Item3"),
-get_node("Panel/Items/Item4")
+get_node("IventoryPanel/Items/Item1"),
+get_node("IventoryPanel/Items/Item2"),
+get_node("IventoryPanel/Items/Item3"),
+get_node("IventoryPanel/Items/Item4")
 ]
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -17,6 +17,7 @@ func _process(delta):
 		item.get_node("TextureRect").texture = itemData.sprite
 		cont=cont+1
 	pass
+	
 
 
 func _on_Button1_button_down():
@@ -38,4 +39,19 @@ func _on_Button3_button_down():
 func _on_Button4_button_down():
 	#chamar função que vai jogar o item no centro da tela (caldeirão, mesa etc)
 	GameManager.inventario[3] = {"nome": "", "sprite": null, "qtd": 0};
+	pass # Replace with function body.
+
+
+func _on_FrontScreenButton_button_down():
+	#Change camera to front screen
+	pass # Replace with function body.
+
+
+func _on_LeftScreenButton_button_down():
+	#Change camera to the left room
+	pass # Replace with function body.
+
+
+func _on_RightScreenButton_button_down():
+	#Change camera to the right room
 	pass # Replace with function body.
