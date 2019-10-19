@@ -8,8 +8,21 @@ get_node("IventoryPanel/Items/Item3"),
 get_node("IventoryPanel/Items/Item4")
 ]
 
+onready var leftButtonLabel = get_node("LeftScreen/Label")
+onready var rightButtonLabel = get_node("RightScreen/Label")
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
+	match GameManager.screenCamera:
+		"left":
+			rightButtonLabel.text = "Sala do Caldeirão"
+		"right":
+			leftButtonLabel.text = "Sala do Caldeirão"
+		"center":
+			rightButtonLabel.text = "Sala de Corte"
+			leftButtonLabel.text = "Sala do Forno"
+			
 	var cont = 0
 	for item in items:
 		var itemData = GameManager.inventario[cont]
@@ -44,14 +57,23 @@ func _on_Button4_button_down():
 
 func _on_FrontScreenButton_button_down():
 	#Change camera to front screen
+	GameManager.screenCamera = "front"
 	pass # Replace with function body.
 
 
 func _on_LeftScreenButton_button_down():
 	#Change camera to the left room
+	if(GameManager.screenCamera == "right"):
+		GameManager.screenCamera = "center"
+	else:
+		GameManager.screenCamera = "left"
 	pass # Replace with function body.
 
 
 func _on_RightScreenButton_button_down():
 	#Change camera to the right room
+	if(GameManager.screenCamera == "left"):
+		GameManager.screenCamera = "center"
+	else:
+		GameManager.screenCamera = "right"
 	pass # Replace with function body.

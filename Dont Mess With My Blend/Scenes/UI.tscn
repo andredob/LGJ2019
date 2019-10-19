@@ -9,20 +9,20 @@
 [ext_resource path="res://Others/ScreenButtonsFlatbox.tres" type="StyleBox" id=7]
 [ext_resource path="res://Others/ScreenButtonsFonte.tres" type="DynamicFont" id=8]
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 draw_center = false
 
-[sub_resource type="StyleBoxFlat" id=6]
-draw_center = false
-
-[sub_resource type="StyleBoxFlat" id=7]
-draw_center = false
-
-[sub_resource type="StyleBoxFlat" id=8]
-draw_center = false
-
 [sub_resource type="StyleBoxFlat" id=2]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id=3]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id=4]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.52549, 0.941176, 0.545098, 1 )
 border_width_left = 1
 border_width_top = 1
@@ -36,10 +36,10 @@ corner_radius_bottom_left = 80
 shadow_color = Color( 0.435294, 0.435294, 0.435294, 0.780392 )
 shadow_size = 10
 
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
-[sub_resource type="Theme" id=1]
+[sub_resource type="Theme" id=7]
 default_font = ExtResource( 8 )
 
 [node name="UI" type="Control"]
@@ -119,7 +119,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_default_cursor_shape = 2
 custom_styles/hover = ExtResource( 5 )
-custom_styles/normal = SubResource( 5 )
+custom_styles/normal = SubResource( 1 )
 
 [node name="Item2" type="Panel" parent="IventoryPanel/Items"]
 anchor_left = 0.5
@@ -162,7 +162,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_default_cursor_shape = 2
 custom_styles/hover = ExtResource( 5 )
-custom_styles/normal = SubResource( 6 )
+custom_styles/normal = SubResource( 2 )
 action_mode = 0
 
 [node name="Item3" type="Panel" parent="IventoryPanel/Items"]
@@ -206,7 +206,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_default_cursor_shape = 2
 custom_styles/hover = ExtResource( 5 )
-custom_styles/normal = SubResource( 7 )
+custom_styles/normal = SubResource( 3 )
 
 [node name="Item4" type="Panel" parent="IventoryPanel/Items"]
 anchor_left = 0.5
@@ -247,11 +247,13 @@ clip_text = true
 [node name="Button4" type="Button" parent="IventoryPanel/Items/Item4"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = -1.2923
 margin_top = 1.10803
+margin_right = -1.2923
 margin_bottom = 1.10803
 mouse_default_cursor_shape = 2
 custom_styles/hover = ExtResource( 5 )
-custom_styles/normal = SubResource( 8 )
+custom_styles/normal = SubResource( 4 )
 
 [node name="RightScreen" type="Panel" parent="."]
 anchor_left = 1.0
@@ -269,9 +271,9 @@ theme = ExtResource( 6 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_default_cursor_shape = 2
-custom_styles/hover = SubResource( 2 )
+custom_styles/hover = SubResource( 5 )
 custom_styles/pressed = ExtResource( 7 )
-custom_styles/normal = SubResource( 3 )
+custom_styles/normal = SubResource( 6 )
 
 [node name="Label" type="Label" parent="RightScreen"]
 anchor_left = 0.5
@@ -282,7 +284,7 @@ margin_left = -40.0
 margin_top = -32.5
 margin_right = 40.0
 margin_bottom = 18.5
-theme = SubResource( 1 )
+theme = SubResource( 7 )
 text = "Sala de corte"
 align = 1
 valign = 1
@@ -316,9 +318,9 @@ theme = ExtResource( 6 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_default_cursor_shape = 2
-custom_styles/hover = SubResource( 2 )
+custom_styles/hover = SubResource( 5 )
 custom_styles/pressed = ExtResource( 7 )
-custom_styles/normal = SubResource( 3 )
+custom_styles/normal = SubResource( 6 )
 
 [node name="Label" type="Label" parent="LeftScreen"]
 anchor_left = 0.5
@@ -329,7 +331,7 @@ margin_left = -40.0
 margin_top = -32.5
 margin_right = 40.0
 margin_bottom = 18.5
-theme = SubResource( 1 )
+theme = SubResource( 7 )
 text = "Sala do forno"
 align = 1
 valign = 1
@@ -363,9 +365,9 @@ theme = ExtResource( 6 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_default_cursor_shape = 2
-custom_styles/hover = SubResource( 2 )
+custom_styles/hover = SubResource( 5 )
 custom_styles/pressed = ExtResource( 7 )
-custom_styles/normal = SubResource( 3 )
+custom_styles/normal = SubResource( 6 )
 
 [node name="Label" type="Label" parent="FrontScreen"]
 anchor_left = 0.5
@@ -376,7 +378,7 @@ margin_left = -40.0
 margin_top = -32.5
 margin_right = 40.0
 margin_bottom = 18.5
-theme = SubResource( 1 )
+theme = SubResource( 7 )
 text = "Frente"
 align = 1
 valign = 1
