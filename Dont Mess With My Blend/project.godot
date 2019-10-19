@@ -22,12 +22,14 @@ config/icon="res://icon.png"
 [autoload]
 
 GameManager="*res://Scripts/GameManager.gd"
+ChopTable="*res://Scripts/ChopTable/ChopTable.gd"
 
 [display]
 
 window/size/width=1280
 window/size/height=720
 window/size/resizable=false
+window/size/always_on_top=true
 window/stretch/aspect="keep"
 
 [rendering]
