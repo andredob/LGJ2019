@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scenes/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Others/PanelFonte.tres" type="DynamicFont" id=2]
@@ -24,6 +24,16 @@ Panel/styles/panel = SubResource( 1 )
 Panel/styles/panelf = null
 Panel/styles/panelnc = null
 
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.0588235, 0.054902, 0.054902, 0.635294 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 10
+corner_radius_bottom_right = 10
+
 [sub_resource type="StyleBoxFlat" id=3]
 draw_center = false
 border_width_left = 2
@@ -31,6 +41,26 @@ border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
 border_color = Color( 0, 0, 0, 0.192157 )
+corner_radius_top_left = 10
+corner_radius_bottom_right = 10
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.0588235, 0.054902, 0.054902, 0.635294 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 10
+corner_radius_bottom_right = 10
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.0588235, 0.054902, 0.054902, 0.635294 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 1 )
 corner_radius_top_left = 10
 corner_radius_bottom_right = 10
 
@@ -60,6 +90,8 @@ margin_left = 54.7382
 margin_top = 72.5945
 margin_right = 241.738
 margin_bottom = 122.595
+mouse_default_cursor_shape = 2
+custom_styles/hover = SubResource( 4 )
 custom_styles/normal = SubResource( 3 )
 custom_fonts/font = ExtResource( 2 )
 text = "Jogar"
@@ -69,6 +101,8 @@ margin_left = 54.7382
 margin_top = 142.595
 margin_right = 241.738
 margin_bottom = 192.595
+mouse_default_cursor_shape = 2
+custom_styles/hover = SubResource( 5 )
 custom_styles/normal = SubResource( 3 )
 custom_fonts/font = ExtResource( 2 )
 text = "Credits"
@@ -78,6 +112,8 @@ margin_left = 54.7382
 margin_top = 212.595
 margin_right = 241.738
 margin_bottom = 262.595
+mouse_default_cursor_shape = 2
+custom_styles/hover = SubResource( 6 )
 custom_styles/normal = SubResource( 3 )
 custom_fonts/font = ExtResource( 2 )
 text = "Sair"
@@ -95,9 +131,9 @@ texture = ExtResource( 3 )
 
 [node name="CircleCenter" type="TextureRect" parent="."]
 modulate = Color( 1, 1, 1, 0.278431 )
-margin_left = 471.015
+margin_left = 470.158
 margin_top = -32.7336
-margin_right = 1271.02
+margin_right = 1270.16
 margin_bottom = 767.266
 rect_rotation = 38.0
 rect_scale = Vector2( 0.85, 0.85 )

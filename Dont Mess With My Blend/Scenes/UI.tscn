@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Scripts/UI/UI.gd" type="Script" id=1]
 [ext_resource path="res://Others/MolduraInventaryTheme.tres" type="Theme" id=2]
@@ -57,6 +57,16 @@ corner_radius_bottom_left = 10
 shadow_color = Color( 1, 1, 1, 0.34902 )
 shadow_size = 5
 
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.0588235, 0.054902, 0.054902, 0.635294 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 10
+corner_radius_bottom_right = 10
+
 [sub_resource type="StyleBoxFlat" id=9]
 draw_center = false
 border_width_left = 1
@@ -64,6 +74,16 @@ border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
 border_color = Color( 0, 0, 0, 0.458824 )
+corner_radius_top_left = 10
+corner_radius_bottom_right = 10
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.0588235, 0.054902, 0.054902, 0.635294 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 1 )
 corner_radius_top_left = 10
 corner_radius_bottom_right = 10
 
@@ -432,7 +452,6 @@ anchor_bottom = 1.0
 rect_pivot_offset = Vector2( 640, 360 )
 
 [node name="Pause" type="Panel" parent="."]
-visible = false
 margin_left = 509.0
 margin_top = 246.0
 margin_right = 771.0
@@ -445,6 +464,8 @@ margin_left = 41.0
 margin_top = 69.0
 margin_right = 222.0
 margin_bottom = 130.0
+mouse_default_cursor_shape = 2
+custom_styles/hover = SubResource( 10 )
 custom_styles/normal = SubResource( 9 )
 custom_fonts/font = ExtResource( 9 )
 text = "Continuar"
@@ -454,6 +475,8 @@ margin_left = 16.0
 margin_top = 139.0
 margin_right = 242.0
 margin_bottom = 200.0
+mouse_default_cursor_shape = 2
+custom_styles/hover = SubResource( 11 )
 custom_styles/normal = SubResource( 9 )
 custom_fonts/font = ExtResource( 9 )
 text = "Sair Para o Menu"
