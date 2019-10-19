@@ -15,9 +15,6 @@ var lastPoint = Vector2(0,0)
 var actualPoint = Vector2(0,0)
 var mousePressed = false
 
-func _ready():
-	pass
-
 func _process(delta):
 	if mousePressed:
 		get_child(1).add_point(actualPoint)
@@ -27,7 +24,7 @@ func _input(event):
 	if event is InputEventMouseButton:
 		print(actualPoint)
 		lastPoint = actualPoint
-		actualPoint = event.relative
+		actualPoint = event.global_position
 		if !mousePressed :
 			mousePressed = true
 		else:
