@@ -1,7 +1,9 @@
 extends Node2D
 var defaultIcon = preload("res://icon.png")
 
-#onready var frogPos = get_node("frog").position
+var aux = [
+{"sprite": "dafaultIcon"}
+] 
 
 var itens = [
 {"name": "frog", "sprite": "frog"}
@@ -12,14 +14,15 @@ var table = [
 ]
 
 func _process(delta):
-	for iten in itens:
-		if String(iten.sprite) == "":
-			get_node(iten.name).set_texture(defaultIcon)
-		
 	pass
 
 func _ready():
-	
 	pass
 
 
+
+
+
+func _on_Button_button_down():
+	get_child(0).get_child(0).visible = true
+	pass # Replace with function body.
