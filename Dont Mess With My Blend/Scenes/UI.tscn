@@ -43,21 +43,21 @@ bg_color = Color( 0.6, 0.6, 0.6, 0 )
 default_font = ExtResource( 8 )
 
 [node name="UI" type="Control"]
-anchor_right = 1.0
-anchor_bottom = 1.0
 script = ExtResource( 1 )
 
-[node name="IventoryPanel" type="Panel" parent="."]
+[node name="InventoryPanel" type="Panel" parent="."]
+editor/display_folded = true
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -274.5
-margin_top = -141.0
-margin_right = 274.5
+margin_left = 341.67
+margin_top = 580.0
+margin_right = 890.67
+margin_bottom = 721.0
 theme = ExtResource( 2 )
 
-[node name="Label" type="Label" parent="IventoryPanel"]
+[node name="Label" type="Label" parent="InventoryPanel"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -59.5
@@ -69,7 +69,7 @@ theme = ExtResource( 2 )
 text = "INVENTÁRIO"
 valign = 1
 
-[node name="Items" type="Control" parent="IventoryPanel"]
+[node name="Items" type="Control" parent="InventoryPanel"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -78,7 +78,7 @@ margin_left = -225.5
 margin_top = -113.0
 margin_right = 225.5
 
-[node name="Item1" type="Panel" parent="IventoryPanel/Items"]
+[node name="Item1" type="Panel" parent="InventoryPanel/Items"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -89,7 +89,7 @@ margin_right = -117.0
 margin_bottom = 50.0
 theme = ExtResource( 3 )
 
-[node name="TextureRect" type="TextureRect" parent="IventoryPanel/Items/Item1"]
+[node name="TextureRect" type="TextureRect" parent="InventoryPanel/Items/Item1"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -101,7 +101,7 @@ margin_bottom = 37.0
 texture = ExtResource( 4 )
 stretch_mode = 4
 
-[node name="Label" type="Label" parent="IventoryPanel/Items/Item1"]
+[node name="Label" type="Label" parent="InventoryPanel/Items/Item1"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -114,14 +114,14 @@ text = "Sapo perereca"
 valign = 2
 clip_text = true
 
-[node name="Button1" type="Button" parent="IventoryPanel/Items/Item1"]
+[node name="Button1" type="Button" parent="InventoryPanel/Items/Item1"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_default_cursor_shape = 2
 custom_styles/hover = ExtResource( 5 )
 custom_styles/normal = SubResource( 1 )
 
-[node name="Item2" type="Panel" parent="IventoryPanel/Items"]
+[node name="Item2" type="Panel" parent="InventoryPanel/Items"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -132,7 +132,7 @@ margin_right = -7.0
 margin_bottom = 50.0
 theme = ExtResource( 3 )
 
-[node name="TextureRect" type="TextureRect" parent="IventoryPanel/Items/Item2"]
+[node name="TextureRect" type="TextureRect" parent="InventoryPanel/Items/Item2"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -144,7 +144,7 @@ margin_bottom = 37.0
 texture = ExtResource( 4 )
 stretch_mode = 4
 
-[node name="Label" type="Label" parent="IventoryPanel/Items/Item2"]
+[node name="Label" type="Label" parent="InventoryPanel/Items/Item2"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -157,7 +157,7 @@ text = "Sapo perereca"
 valign = 2
 clip_text = true
 
-[node name="Button2" type="Button" parent="IventoryPanel/Items/Item2"]
+[node name="Button2" type="Button" parent="InventoryPanel/Items/Item2"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_default_cursor_shape = 2
@@ -165,7 +165,7 @@ custom_styles/hover = ExtResource( 5 )
 custom_styles/normal = SubResource( 2 )
 action_mode = 0
 
-[node name="Item3" type="Panel" parent="IventoryPanel/Items"]
+[node name="Item3" type="Panel" parent="InventoryPanel/Items"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -176,7 +176,7 @@ margin_right = 103.0
 margin_bottom = 50.0
 theme = ExtResource( 3 )
 
-[node name="TextureRect" type="TextureRect" parent="IventoryPanel/Items/Item3"]
+[node name="TextureRect" type="TextureRect" parent="InventoryPanel/Items/Item3"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -188,7 +188,7 @@ margin_bottom = 37.0
 texture = ExtResource( 4 )
 stretch_mode = 4
 
-[node name="Label" type="Label" parent="IventoryPanel/Items/Item3"]
+[node name="Label" type="Label" parent="InventoryPanel/Items/Item3"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -201,14 +201,14 @@ text = "Sapo perereca"
 valign = 2
 clip_text = true
 
-[node name="Button3" type="Button" parent="IventoryPanel/Items/Item3"]
+[node name="Button3" type="Button" parent="InventoryPanel/Items/Item3"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_default_cursor_shape = 2
 custom_styles/hover = ExtResource( 5 )
 custom_styles/normal = SubResource( 3 )
 
-[node name="Item4" type="Panel" parent="IventoryPanel/Items"]
+[node name="Item4" type="Panel" parent="InventoryPanel/Items"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -219,7 +219,7 @@ margin_right = 213.0
 margin_bottom = 50.0
 theme = ExtResource( 3 )
 
-[node name="TextureRect" type="TextureRect" parent="IventoryPanel/Items/Item4"]
+[node name="TextureRect" type="TextureRect" parent="InventoryPanel/Items/Item4"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -231,7 +231,7 @@ margin_bottom = 37.0
 texture = ExtResource( 4 )
 stretch_mode = 4
 
-[node name="Label" type="Label" parent="IventoryPanel/Items/Item4"]
+[node name="Label" type="Label" parent="InventoryPanel/Items/Item4"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -244,7 +244,7 @@ text = "Sapo perereca"
 valign = 2
 clip_text = true
 
-[node name="Button4" type="Button" parent="IventoryPanel/Items/Item4"]
+[node name="Button4" type="Button" parent="InventoryPanel/Items/Item4"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -1.2923
@@ -260,9 +260,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-margin_left = -76.0
-margin_top = -54.0
-margin_bottom = 54.0
+margin_left = 1204.0
+margin_top = 310.0
+margin_right = 1280.0
+margin_bottom = 418.0
 hint_tooltip = "Ir para sala de corte"
 mouse_default_cursor_shape = 2
 theme = ExtResource( 6 )
@@ -305,11 +306,12 @@ text = ">"
 valign = 1
 
 [node name="LeftScreen" type="Panel" parent="."]
+editor/display_folded = true
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_top = -54.0
+margin_top = 310.0
 margin_right = 76.0
-margin_bottom = 54.0
+margin_bottom = 418.0
 hint_tooltip = "Ir para sala de corte"
 mouse_default_cursor_shape = 2
 theme = ExtResource( 6 )
@@ -352,10 +354,11 @@ text = "<"
 valign = 1
 
 [node name="FrontScreen" type="Panel" parent="."]
+editor/display_folded = true
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -38.0
-margin_right = 38.0
+margin_left = 577.083
+margin_right = 653.083
 margin_bottom = 66.0
 hint_tooltip = "Ir para sala de corte"
 mouse_default_cursor_shape = 2
@@ -396,10 +399,10 @@ rect_pivot_offset = Vector2( 240.666, -84.1664 )
 theme = ExtResource( 2 )
 text = "^"
 valign = 1
-[connection signal="button_down" from="IventoryPanel/Items/Item1/Button1" to="." method="_on_Button1_button_down"]
-[connection signal="button_down" from="IventoryPanel/Items/Item2/Button2" to="." method="_on_Button2_button_down"]
-[connection signal="button_down" from="IventoryPanel/Items/Item3/Button3" to="." method="_on_Button3_button_down"]
-[connection signal="button_down" from="IventoryPanel/Items/Item4/Button4" to="." method="_on_Button4_button_down"]
+[connection signal="button_down" from="InventoryPanel/Items/Item1/Button1" to="." method="_on_Button1_button_down"]
+[connection signal="button_down" from="InventoryPanel/Items/Item2/Button2" to="." method="_on_Button2_button_down"]
+[connection signal="button_down" from="InventoryPanel/Items/Item3/Button3" to="." method="_on_Button3_button_down"]
+[connection signal="button_down" from="InventoryPanel/Items/Item4/Button4" to="." method="_on_Button4_button_down"]
 [connection signal="button_down" from="RightScreen/RightScreenButton" to="." method="_on_RightScreenButton_button_down"]
 [connection signal="button_down" from="LeftScreen/LeftScreenButton" to="." method="_on_LeftScreenButton_button_down"]
 [connection signal="button_down" from="FrontScreen/FrontScreenButton" to="." method="_on_FrontScreenButton_button_down"]

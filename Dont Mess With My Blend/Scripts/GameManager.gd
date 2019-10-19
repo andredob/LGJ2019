@@ -1,5 +1,7 @@
 extends Node
+
 var defaultIcon = preload("res://icon.png")
+
 var screenCamera = "center"
 var screens = [
 {"name": "center", "pos": Vector2(640, 360)},

@@ -2,10 +2,10 @@ extends Control
 
 #items do inventário
 onready var items = [
-get_node("IventoryPanel/Items/Item1"),
-get_node("IventoryPanel/Items/Item2"),
-get_node("IventoryPanel/Items/Item3"),
-get_node("IventoryPanel/Items/Item4")
+get_node("InventoryPanel/Items/Item1"),
+get_node("InventoryPanel/Items/Item2"),
+get_node("InventoryPanel/Items/Item3"),
+get_node("InventoryPanel/Items/Item4")
 ]
 
 onready var leftButtonLabel = get_node("LeftScreen/Label")
@@ -22,7 +22,6 @@ func _process(delta):
 		"center":
 			rightButtonLabel.text = "Sala de Corte"
 			leftButtonLabel.text = "Sala do Forno"
-			
 	var cont = 0
 	for item in items:
 		var itemData = GameManager.inventario[cont]

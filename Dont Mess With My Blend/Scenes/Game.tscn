@@ -20,12 +20,11 @@ current = true
 drag_margin_h_enabled = false
 drag_margin_v_enabled = false
 smoothing_enabled = true
+smoothing_speed = 8.0
 editor_draw_limits = true
 
-[node name="Control" type="Control" parent="Camera2D"]
-margin_left = -640.0
+[node name="UI" parent="Camera2D" instance=ExtResource( 4 )]
+margin_left = -639.0
 margin_top = -360.0
-margin_right = 642.0
-margin_bottom = 362.0
-
-[node name="UI" parent="Camera2D/Control" instance=ExtResource( 4 )]
+margin_right = -639.0
+margin_bottom = -360.0
