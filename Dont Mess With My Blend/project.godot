@@ -23,6 +23,14 @@ config/icon="res://icon.png"
 
 GameManager="*res://Scripts/GameManager.gd"
 
+[display]
+
+window/size/width=1280
+window/size/height=720
+window/size/resizable=false
+window/size/always_on_top=true
+window/stretch/aspect="keep"
+
 [rendering]
 
 vram_compression/import_etc=true
