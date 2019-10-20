@@ -3,12 +3,25 @@ extends Node2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
+
+onready var runa = [preload("res://Sprites/Runas/Runa1.png"),
+preload("res://Sprites/Runas/Runa2.png"),
+preload("res://Sprites/Runas/Runa3.png"),
+preload("res://Sprites/Runas/Runa4.png"),
+preload("res://Sprites/Runas/Runa5.png"),
+preload("res://Sprites/Runas/Runa6.png"),
+preload("res://Sprites/Runas/Runa7.png"),
+preload("res://Sprites/Runas/Runa8.png")]
+
 onready var paperLabel = get_node("Table/Table/Paper/Label")
 onready var WritingRoomSprite = get_node("WritingRoomSprite")
 onready var fireplace = get_node("Fireplace")
 onready var table = get_node("Table")
 
 onready var papelIcon = preload("res://Sprites/Fundos/Paper.png")
+var oldRuna = null
+
+onready var surgeRuna = get_node("Fireplace/SurgeRuna")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -17,6 +30,12 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if(GameManager.showRuna and GameManager.screenCamera == "lareira"):
+		oldRuna = GameManager.regras.setup.runa
+
+		surgeRuna.visible = true
+		surgeRuna.get_node("AnimationPlayer").play("BrilhoAnim")
+		GameManager.showRuna = false
 	pass
 
 func _unhandled_input(event):
@@ -25,7 +44,7 @@ func _unhandled_input(event):
 			if(event.scancode == 16777222 or event.scancode == 16777221):
 				print("texto enviado para inventário "+paperLabel.text)
 				GameManager.screenCamera = "left"
-				if(!GameManager.addItemInventario({"nome": "'"+paperLabel.text+"'", "sprite": papelIcon, "qtd": 1, "tipo":"papel", "valor": paperLabel.text})):
+				if(!GameManager.addItemInventario({"nome": paperLabel.text, "sprite": papelIcon, "qtd": 1, "tipo":"papel", "tamanho": 0})):
 					GameManager.errorMessage = "ERRO: INVENTÁRIO CHEIO"
 				else:
 					GameManager.canShowControls = true
@@ -67,6 +86,8 @@ func _on_ButtonClosePaper_button_down():
 
 
 func _on_ButtonCloseFireplace_button_down():
+	surgeRuna.get_node("AnimationPlayer").stop()
+	surgeRuna.visible = false
 	GameManager.screenCamera = "left"
 	GameManager.canShowControls = true
 	WritingRoomSprite.visible = true

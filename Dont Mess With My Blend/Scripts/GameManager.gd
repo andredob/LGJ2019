@@ -10,6 +10,8 @@ var caldeiraoTemperatura = 100
 
 var barraDeQualidade = 100
 
+var showRuna = false
+
 var screenCamera = "center"
 var screens = [
 {"name": "center", "pos": Vector2(640, 360)},

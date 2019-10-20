@@ -43,6 +43,7 @@ mouse_default_cursor_shape = 2
 flat = true
 
 [node name="Fireplace" type="Sprite" parent="."]
+visible = false
 position = Vector2( 840.789, 144.569 )
 scale = Vector2( 1.06531, 1.06531 )
 texture = ExtResource( 2 )

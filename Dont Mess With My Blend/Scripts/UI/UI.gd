@@ -8,6 +8,9 @@ get_node("InventoryPanel/Items/Item3"),
 get_node("InventoryPanel/Items/Item4")
 ]
 
+
+
+
 onready var pause = get_node("Pause")
 
 onready var leftButtonLabel = get_node("LeftScreen/Label")
@@ -88,13 +91,15 @@ func jogarItem(inve):
 	
 	pass
 func jogar_papel(papel):
-	var runa = GameManager.regras.get_runa(papel.valor)
+	var runa = GameManager.regras.get_runa(papel.nome)
 	
 	if typeof(runa) != TYPE_BOOL:
 		print(runa)
+		GameManager.showRuna = true
 		#executar animação da Runa
 		print("runa certa")
 	else : 
+		GameManager.showRuna = true
 		#executar animação de Runa falha
 		print("runa errada")
 		
