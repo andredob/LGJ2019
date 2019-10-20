@@ -24,7 +24,7 @@ func _unhandled_input(event):
 		if event.pressed:
 			if(event.scancode == 16777222 or event.scancode == 16777221):
 				print("texto enviado para inventário "+paperLabel.text)
-				GameManager.inventario[3] = {"nome": "'"+paperLabel.text+"'", "sprite": icon.texture, "qtd": 1, "value": paperLabel.text}
+				GameManager.inventario[3] = {"nome": "'"+paperLabel.text+"'", "sprite": icon.texture, "qtd": 1, "tipo":"papel", "valor": paperLabel.text}
 				WritingRoomSprite.visible = true
 				fireplace.visible = false
 				table.visible = false
