@@ -1,30 +1,218 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Scripts/Window/WindowScene.gd" type="Script" id=1]
-[ext_resource path="res://images/SunIMG.jpg" type="Texture" id=2]
-[ext_resource path="res://images/moonIMG.jpg" type="Texture" id=3]
-[ext_resource path="res://Sprites/Fundos/JanelaDia.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/Fundos/JanelaNoite.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Fundos/Sol1.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Fundos/Sol2.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Fundos/Sol3.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Fundos/JanelaDia.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Fundos/Lua0.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Fundos/Lua2.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Fundos/Lua1.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Fundos/Lua3.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Fundos/Lua4.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Fundos/JanelaNoite.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Ingredientes/PoCamomila.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Ingredientes/SementeMaracuja.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Ingredientes/AguaBanho.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Ingredientes/Cristal.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Ingredientes/PoDeGuarana.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Ingredientes/SementeDePapoula.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Ingredientes/SuorDeGamer.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Ingredientes/Calcio.png" type="Texture" id=19]
 
 [node name="WindowScene" type="Node2D"]
 script = ExtResource( 1 )
 
-[node name="Sun" type="Sprite" parent="."]
-position = Vector2( 780.996, 355.898 )
-scale = Vector2( 1.02904, 1.02904 )
+[node name="Dia" type="Node2D" parent="."]
+
+[node name="ceu" type="Sprite" parent="Dia"]
+position = Vector2( 643.194, 353.248 )
+scale = Vector2( 0.631535, 0.631535 )
 texture = ExtResource( 2 )
 
-[node name="Night" type="Sprite" parent="."]
-position = Vector2( 657.995, 314.573 )
-scale = Vector2( 2.38305, 2.32988 )
+[node name="nuvens" type="Sprite" parent="Dia"]
+position = Vector2( 651.464, 97.0401 )
+scale = Vector2( 0.144877, 0.144739 )
 texture = ExtResource( 3 )
 
-[node name="WindowSun" type="Sprite" parent="."]
-position = Vector2( 640.785, 360.014 )
-scale = Vector2( 0.666281, 0.666281 )
+[node name="sol" type="Sprite" parent="Dia"]
+visible = false
+position = Vector2( 524.761, 268.013 )
+scale = Vector2( 0.188242, 0.188242 )
 texture = ExtResource( 4 )
 
-[node name="WindowNight" type="Sprite" parent="."]
-position = Vector2( 639.387, 360.086 )
-scale = Vector2( 0.675242, 0.675242 )
+[node name="sol1" type="Sprite" parent="Dia"]
+visible = false
+position = Vector2( 588.416, 182.93 )
+scale = Vector2( 0.188242, 0.188242 )
+texture = ExtResource( 4 )
+
+[node name="sol2" type="Sprite" parent="Dia"]
+visible = false
+position = Vector2( 705.642, 183.56 )
+scale = Vector2( 0.188242, 0.188242 )
+texture = ExtResource( 4 )
+
+[node name="sol3" type="Sprite" parent="Dia"]
+visible = false
+position = Vector2( 769.928, 268.013 )
+scale = Vector2( 0.188242, 0.188242 )
+texture = ExtResource( 4 )
+
+[node name="WindowSun" type="Sprite" parent="Dia"]
+position = Vector2( 640.785, 360.014 )
+scale = Vector2( 0.666281, 0.666281 )
 texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Noite" type="Node2D" parent="."]
+visible = false
+
+[node name="noite" type="Sprite" parent="Noite"]
+position = Vector2( 626.109, 355.102 )
+scale = Vector2( 0.640926, 0.626626 )
+texture = ExtResource( 6 )
+
+[node name="luaCrescente" type="Sprite" parent="Noite"]
+visible = false
+position = Vector2( 747.971, 229.572 )
+scale = Vector2( 0.175273, 0.175273 )
+texture = ExtResource( 7 )
+
+[node name="luaCheia" type="Sprite" parent="Noite"]
+visible = false
+position = Vector2( 747.971, 229.572 )
+scale = Vector2( 0.175273, 0.175273 )
+texture = ExtResource( 8 )
+
+[node name="luaMinguante" type="Sprite" parent="Noite"]
+visible = false
+position = Vector2( 747.971, 229.572 )
+scale = Vector2( 0.175273, 0.175273 )
+texture = ExtResource( 9 )
+
+[node name="luNova" type="Sprite" parent="Noite"]
+visible = false
+position = Vector2( 747.592, 226.515 )
+scale = Vector2( 0.175273, 0.175273 )
+texture = ExtResource( 10 )
+
+[node name="WindowNight" type="Sprite" parent="Noite"]
+position = Vector2( 641.071, 360.555 )
+scale = Vector2( 0.667868, 0.667868 )
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ingredientes" type="Node2D" parent="."]
+position = Vector2( 189.976, 416.138 )
+
+[node name="PoCamomila" type="Sprite" parent="Ingredientes"]
+position = Vector2( -100, -120 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 12 )
+
+[node name="ButtonPoCamomila" type="Button" parent="Ingredientes/PoCamomila"]
+margin_left = -210.0
+margin_top = -206.0
+margin_right = 246.0
+margin_bottom = 239.0
+flat = true
+
+[node name="SementeMaracuja" type="Sprite" parent="Ingredientes"]
+position = Vector2( 100, -120 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 13 )
+
+[node name="ButtonSemMaracuja" type="Button" parent="Ingredientes/SementeMaracuja"]
+margin_left = -217.96
+margin_top = -220.32
+margin_right = 238.04
+margin_bottom = 224.68
+flat = true
+
+[node name="AguaBanho" type="Sprite" parent="Ingredientes"]
+position = Vector2( -100, 80 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 14 )
+
+[node name="ButtonAguaBanho" type="Button" parent="Ingredientes/AguaBanho"]
+margin_left = -210.0
+margin_top = -218.733
+margin_right = 246.0
+margin_bottom = 226.267
+flat = true
+
+[node name="Cristal" type="Sprite" parent="Ingredientes"]
+position = Vector2( 100, 80 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 15 )
+
+[node name="ButtonCristal" type="Button" parent="Ingredientes/Cristal"]
+margin_left = -213.187
+margin_top = -223.507
+margin_right = 242.813
+margin_bottom = 221.493
+flat = true
+
+[node name="ContraIngredientes" type="Node2D" parent="."]
+position = Vector2( 1079.71, 420.999 )
+
+[node name="PoDeGuarana" type="Sprite" parent="ContraIngredientes"]
+position = Vector2( -100, -120 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 16 )
+
+[node name="ButtonPoGuarana" type="Button" parent="ContraIngredientes/PoDeGuarana"]
+margin_left = -211.588
+margin_top = -217.432
+margin_right = 244.412
+margin_bottom = 227.568
+flat = true
+
+[node name="SementeDePapoula" type="Sprite" parent="ContraIngredientes"]
+position = Vector2( 100, -120 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 17 )
+
+[node name="ButtonSemPapoula" type="Button" parent="ContraIngredientes/SementeDePapoula"]
+margin_left = -214.774
+margin_top = -212.659
+margin_right = 241.226
+margin_bottom = 232.341
+flat = true
+
+[node name="SuorDeGamer" type="Sprite" parent="ContraIngredientes"]
+position = Vector2( -100, 80 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 18 )
+
+[node name="ButtonSuorGamer" type="Button" parent="ContraIngredientes/SuorDeGamer"]
+margin_left = -225.907
+margin_top = -225.393
+margin_right = 230.093
+margin_bottom = 219.607
+flat = true
+
+[node name="Calcio" type="Sprite" parent="ContraIngredientes"]
+position = Vector2( 100, 80 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 19 )
+
+[node name="ButtonCalcio" type="Button" parent="ContraIngredientes/Calcio"]
+margin_left = -219.548
+margin_top = -225.393
+margin_right = 236.452
+margin_bottom = 219.607
+flat = true
+[connection signal="button_down" from="Ingredientes/PoCamomila/ButtonPoCamomila" to="." method="_on_ButtonPoCamomila_button_down"]
+[connection signal="button_down" from="Ingredientes/SementeMaracuja/ButtonSemMaracuja" to="." method="_on_ButtonSemMaracuja_button_down"]
+[connection signal="button_down" from="Ingredientes/AguaBanho/ButtonAguaBanho" to="." method="_on_ButtonAguaBanho_button_down"]
+[connection signal="button_down" from="Ingredientes/Cristal/ButtonCristal" to="." method="_on_ButtonCristal_button_down"]
+[connection signal="button_down" from="ContraIngredientes/PoDeGuarana/ButtonPoGuarana" to="." method="_on_ButtonPoGuarana_button_down"]
+[connection signal="button_down" from="ContraIngredientes/SementeDePapoula/ButtonSemPapoula" to="." method="_on_ButtonSemPapoula_button_down"]
+[connection signal="button_down" from="ContraIngredientes/SuorDeGamer/ButtonSuorGamer" to="." method="_on_ButtonSuorGamer_button_down"]
+[connection signal="button_down" from="ContraIngredientes/Calcio/ButtonCalcio" to="." method="_on_ButtonCalcio_button_down"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://Scenes/Caldeirao.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Caldeirao.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Fundos/Caldeirao.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Medidor/MedidorTemperatura.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Medidor/Ponteiro.png" type="Texture" id=4]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Animations/Redemoinho.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Animations/AnimatedBolha.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Sounds/fire.wav" type="AudioStream" id=10]
+
 
 [sub_resource type="Animation" id=1]
 resource_name = "RedemoinhoAnim"

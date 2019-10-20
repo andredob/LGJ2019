@@ -24,8 +24,6 @@ func _init():
 	setup.temperatura = get_temperatura(setup.runa)
 	setup.item_sequencia = get_inten_sequencia(setup.runa,setup.anel)
 	setup.animais = get_animais(setup.anel)
-	
-	
 	pass
 
 func get_runa(palavra):

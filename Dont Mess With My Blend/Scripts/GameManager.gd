@@ -27,12 +27,17 @@ var inventario = [
 ]
 
 func addItemInventario(itemExterno):
+	var noSpace = false
 	for i in range(3):
 		if(inventario[i].nome=="" or inventario[i].sprite==null):
 			inventario[i] = itemExterno
+			noSpace = false
 			break
 			pass
+		else:
+			noSpace = true
 		pass
+	return noSpace
 	
 	
 	

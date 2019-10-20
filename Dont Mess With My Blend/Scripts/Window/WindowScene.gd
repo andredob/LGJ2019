@@ -1,9 +1,13 @@
 extends Node2D
 
-onready var sun = get_node("Sun")
-onready var night = get_node("Night")
-onready var windowSun = get_node("WindowSun")
-onready var windowNight = get_node("WindowNight")
+onready var sols = [get_node("Dia/sol"), get_node("Dia/sol1"), get_node("Dia/sol2"), get_node("Dia/sol3")]
+onready var luas = [get_node("Noite/luNova"), get_node("Noite/luaCrescente"), get_node("Noite/luaCheia"), get_node("Noite/luaMinguante")]
+
+onready var noite = get_node("Noite")
+onready var dia = get_node("Dia")
+
+onready var windowSun = get_node("Dia/WindowSun")
+onready var windowNight = get_node("Noite/WindowNight")
 
 
 # Called when the node enters the scene tree for the first time.
@@ -14,13 +18,48 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if(DayAndNightManager.isNight):
-		sun.visible = false
-		night.visible = true
+		noite.visible = true
+		dia.visible = false
+		luas[GameManager.regras.setup.lua].visible = true
 		windowSun.visible = false
 		windowNight.visible = true
 	else:
-		sun.visible = true
-		night.visible = false
+		noite.visible = false
+		dia.visible = true
+		sols[GameManager.regras.setup.hora].visible = true
 		windowSun.visible = true
 		windowNight.visible = false
 	pass
+
+
+func _on_ButtonPoCamomila_button_down():
+	GameManager.addItemInventario(Armario.itens[0])
+	pass # Replace with function body.
+
+
+func _on_ButtonSemMaracuja_button_down():
+	pass # Replace with function body.
+
+
+func _on_ButtonAguaBanho_button_down():
+	pass # Replace with function body.
+
+
+func _on_ButtonCristal_button_down():
+	pass # Replace with function body.
+
+
+func _on_ButtonPoGuarana_button_down():
+	pass # Replace with function body.
+
+
+func _on_ButtonSemPapoula_button_down():
+	pass # Replace with function body.
+
+
+func _on_ButtonSuorGamer_button_down():
+	pass # Replace with function body.
+
+
+func _on_ButtonCalcio_button_down():
+	pass # Replace with function body.

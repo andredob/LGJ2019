@@ -24,11 +24,13 @@ func _unhandled_input(event):
 		if event.pressed:
 			if(event.scancode == 16777222 or event.scancode == 16777221):
 				print("texto enviado para inventário "+paperLabel.text)
-				GameManager.addItemInventario({"nome": "'"+paperLabel.text+"'", "sprite": papelIcon, "qtd": 1, "tipo":"papel", "valor": paperLabel.text})
-				GameManager.canShowControls = true
-				WritingRoomSprite.visible = true
-				fireplace.visible = false
-				table.visible = false
+				if(!GameManager.addItemInventario({"nome": "'"+paperLabel.text+"'", "sprite": papelIcon, "qtd": 1, "tipo":"papel", "valor": paperLabel.text})):
+					print("ERRO INVENTÁRIO CHEIO")
+				else:
+					GameManager.canShowControls = true
+					WritingRoomSprite.visible = true
+					fireplace.visible = false
+					table.visible = false
 			elif(event.scancode == 16777220):
 				paperLabel.text = str(paperLabel.text).substr(0, str(paperLabel.text).length() - 1)
 			elif(str(paperLabel.text).length() < 10 and event.as_text().length() < 2):
