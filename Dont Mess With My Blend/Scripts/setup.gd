@@ -6,7 +6,8 @@ extends Node
 #lua: 0 lua nova , 1 crecente, 2 lua cheia, 3 minguante
 #ummidade: 0-100
 
-var setup = {"umidade":0,"periodo": 0, "anel" : 0, "hora":0 , "lua": 0}
+var setup = {
+"umidade":0,"periodo": 0, "anel" : 0, "hora":0 , "lua": 0}
 
 func _init():
 	randomize()
@@ -98,9 +99,18 @@ func get_inten_sequencia(runa,anel):
 			return [2,1,0,3]
 		if runa == 3 and anel == 3 :
 			return [2,1,3,0]
-		
 	pass
+	
 func get_animais(anel):
+	match anel:
+		0:
+			return [0,1]
+		1:
+			return [2,3]
+		2:
+			return [0,3]
+		3:
+			return [1,2]
 	pass
 func get_frasco(runa,dia):
 	pass

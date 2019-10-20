@@ -18,3 +18,9 @@ var inventario = [
 {"nome": "Perna esquerda de sapo", "sprite": defaultIcon, "qtd": 1},
 {"nome": "Perna esquerda de sapo", "sprite": defaultIcon, "qtd": 1}, 
 ]
+
+func _ready():
+	
+	
+	
+	pass
