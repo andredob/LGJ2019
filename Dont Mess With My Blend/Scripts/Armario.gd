@@ -1,5 +1,7 @@
 extends Node
 
+var defaultIcon = preload("res://icon.png")
+
 var itens = [
 {"nome": "Pó de camumila", "sprite": defaultIcon},
 {"nome": "Semente de maraujá", "sprite": defaultIcon},

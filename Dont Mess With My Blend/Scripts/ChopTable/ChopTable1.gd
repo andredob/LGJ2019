@@ -1,16 +1,16 @@
 extends Node2D
 
-#nodes
-onready var line2d = get_node("Line2D")
-
 #simplified phats
 var snakePath = "table/Snake"
 var frogPath = "table/Frog"
 var batPath = "table/Bat"
 var spiderPath = "table/Spider"
 
+#nodes
+onready var line2d = get_node("Line2D")
+
 #cut vars
-var cutting = false
+var cutting = true
 var cut = false
 
 #point vars
@@ -21,15 +21,18 @@ var actualPoint
 #distance for all types of cuts
 var perfectDistance = 300
 
+func _ready():
+	pass
+
 #calculate the distance between two points and add a new point to the cut
 func _process(delta):
 	actualPoint = get_global_mouse_position()
+	
 	if cut:
 		if prevPoint.x == 0 and prevPoint.y == 0:
 			prevPoint = actualPoint
 		else:
-			line2d.add_point(actualPoint)
-			print(line2d.get_point_count())
+			line2d.add_point(actualPoint - position)
 			dist = dist + prevPoint.distance_to(actualPoint)
 	else:
 		if  line2d != null:
@@ -40,11 +43,11 @@ func _process(delta):
 		pass
 	pass
 
-#makes that just when the mouse is pressed is possible to cut
+#just when the mouse is pressed is possible to cut
 func _input(event):
-	if Input.is_action_just_pressed("Cut") and cutting:
+	if event.is_action_pressed("cut") and cutting:
 		cut = true
-	elif Input.is_action_just_released("Cut") or not cutting:
+	elif event.is_action_released("cut") or not cutting:
 		cut = false
 	pass
 
@@ -72,4 +75,3 @@ func _on_Button_button_down(animalName):
 func _disable_shelf_itens():
 	for children in get_node("Shelf").get_children():
 		children.get_child(0).disabled = true
-
