@@ -40,14 +40,6 @@ func _on_ButtonExpandTermometro_button_down():
 	tempControl.visible = true
 	pass # Replace with function body.
 
-
-#func _on_ButtonCloseFireplace_button_down():
-#	GameManager.canShowControls = true
-#	WritingRoomSprite.visible = true
-#	fireplace.visible = false
-#	table.visible = false
-#	pass # Replace with function body.
-
 #ao clicar e segurar o ponteiro
 func _on_ButtonTermControl_button_down():
 	canRoll = true
