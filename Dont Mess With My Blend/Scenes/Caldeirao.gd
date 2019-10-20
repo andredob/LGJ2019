@@ -16,6 +16,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
+	#verifica se pode mudar a temperatura
 	if(canRoll): 
 		ponteiroGrande.look_at(get_local_mouse_position())
 		ponteiroGrande.rotation_degrees += 90
@@ -27,6 +29,7 @@ func _process(delta):
 			
 		print(ponteiroGrande.rotation_degrees)
 	else:
+		#atualiza ponteiros locais com o valor do gamemanager
 		ponteiroGrande.rotation_degrees = GameManager.caldeiraoTemperatura-160
 		ponteiroPequeno.rotation_degrees = GameManager.caldeiraoTemperatura-160
 	pass
@@ -45,11 +48,13 @@ func _on_ButtonExpandTermometro_button_down():
 #	table.visible = false
 #	pass # Replace with function body.
 
+#ao clicar e segurar o ponteiro
 func _on_ButtonTermControl_button_down():
 	canRoll = true
 	tempControl.visible = true
 	pass # Replace with function body.
 
+#ao soltar o ponteiro
 func _on_ButtonTermControl_button_up():
 	canRoll = false
 	GameManager.caldeiraoTemperatura = ponteiroGrande.rotation_degrees+160
