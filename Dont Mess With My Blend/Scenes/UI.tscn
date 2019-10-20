@@ -7,9 +7,8 @@
 [ext_resource path="res://Others/ItemButtonHover.tres" type="StyleBox" id=5]
 [ext_resource path="res://Others/ScreenButtonsTheme.tres" type="Theme" id=6]
 [ext_resource path="res://Sprites/UI/Small.png" type="Texture" id=7]
-[ext_resource path="res://Others/ScreenButtonsFlatbox.tres" type="StyleBox" id=8]
-[ext_resource path="res://Others/ScreenButtonsFonte.tres" type="DynamicFont" id=9]
-[ext_resource path="res://Others/PanelFonte.tres" type="DynamicFont" id=10]
+[ext_resource path="res://Others/ScreenButtonsFonte.tres" type="DynamicFont" id=8]
+[ext_resource path="res://Others/PanelFonte.tres" type="DynamicFont" id=9]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
@@ -29,11 +28,13 @@ texture = ExtResource( 7 )
 region_rect = Rect2( 0, 0, 800, 800 )
 modulate_color = Color( 0.713726, 0.713726, 0.713726, 1 )
 
+[sub_resource type="StyleBoxTexture" id=19]
+
 [sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
 [sub_resource type="Theme" id=7]
-default_font = ExtResource( 9 )
+default_font = ExtResource( 8 )
 
 [sub_resource type="StyleBoxTexture" id=15]
 texture = ExtResource( 7 )
@@ -335,7 +336,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_default_cursor_shape = 2
 custom_styles/hover = SubResource( 12 )
-custom_styles/pressed = ExtResource( 8 )
+custom_styles/pressed = SubResource( 19 )
 custom_styles/normal = SubResource( 6 )
 
 [node name="Label" type="Label" parent="RightScreen"]
@@ -485,7 +486,7 @@ margin_bottom = 130.0
 mouse_default_cursor_shape = 2
 custom_styles/hover = SubResource( 9 )
 custom_styles/normal = SubResource( 10 )
-custom_fonts/font = ExtResource( 10 )
+custom_fonts/font = ExtResource( 9 )
 text = "Continuar"
 
 [node name="ButtonMenu" type="Button" parent="Pause"]
@@ -496,7 +497,7 @@ margin_bottom = 200.0
 mouse_default_cursor_shape = 2
 custom_styles/hover = SubResource( 11 )
 custom_styles/normal = SubResource( 10 )
-custom_fonts/font = ExtResource( 10 )
+custom_fonts/font = ExtResource( 9 )
 text = "Sair Para o Menu"
 
 [node name="Label" type="Label" parent="Pause"]
@@ -504,7 +505,7 @@ margin_left = 70.1477
 margin_top = 8.67023
 margin_right = 192.148
 margin_bottom = 55.6702
-custom_fonts/font = ExtResource( 10 )
+custom_fonts/font = ExtResource( 9 )
 text = "Pause"
 align = 1
 valign = 1

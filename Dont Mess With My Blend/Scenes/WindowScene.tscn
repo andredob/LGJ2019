@@ -30,6 +30,11 @@ position = Vector2( 643.194, 353.248 )
 scale = Vector2( 0.631535, 0.631535 )
 texture = ExtResource( 2 )
 
+[node name="ceu2" type="Sprite" parent="Dia"]
+position = Vector2( 643.194, 353.248 )
+scale = Vector2( 0.631535, 0.631535 )
+texture = ExtResource( 2 )
+
 [node name="nuvens" type="Sprite" parent="Dia"]
 position = Vector2( 651.464, 97.0401 )
 scale = Vector2( 0.144877, 0.144739 )
@@ -111,7 +116,7 @@ __meta__ = {
 position = Vector2( 189.976, 416.138 )
 
 [node name="PoCamomila" type="Sprite" parent="Ingredientes"]
-position = Vector2( -5.46436, -120 )
+position = Vector2( -38.6063, -251.765 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 12 )
 
@@ -124,7 +129,7 @@ mouse_default_cursor_shape = 2
 flat = true
 
 [node name="SementeMaracuja" type="Sprite" parent="Ingredientes"]
-position = Vector2( 145.426, -120 )
+position = Vector2( 54.6905, -135.981 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 13 )
 
@@ -137,7 +142,7 @@ mouse_default_cursor_shape = 2
 flat = true
 
 [node name="AguaBanho" type="Sprite" parent="Ingredientes"]
-position = Vector2( -5.46436, 80 )
+position = Vector2( -37.9531, -29.8146 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 14 )
 
@@ -150,7 +155,7 @@ mouse_default_cursor_shape = 2
 flat = true
 
 [node name="Cristal" type="Sprite" parent="Ingredientes"]
-position = Vector2( 145.426, 80 )
+position = Vector2( 35.8679, 95.7895 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 15 )
 
@@ -166,7 +171,7 @@ flat = true
 position = Vector2( 1079.71, 420.999 )
 
 [node name="PoDeGuarana" type="Sprite" parent="ContraIngredientes"]
-position = Vector2( -120.872, -120 )
+position = Vector2( -35.6091, -265.263 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 16 )
 
@@ -179,7 +184,7 @@ mouse_default_cursor_shape = 2
 flat = true
 
 [node name="SementeDePapoula" type="Sprite" parent="ContraIngredientes"]
-position = Vector2( 31.2468, -120 )
+position = Vector2( 74.7744, -147.748 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 17 )
 
@@ -192,7 +197,7 @@ mouse_default_cursor_shape = 2
 flat = true
 
 [node name="SuorDeGamer" type="Sprite" parent="ContraIngredientes"]
-position = Vector2( -120.872, 80 )
+position = Vector2( -22.9775, -34.7366 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 18 )
 
@@ -205,7 +210,7 @@ mouse_default_cursor_shape = 2
 flat = true
 
 [node name="Calcio" type="Sprite" parent="ContraIngredientes"]
-position = Vector2( 31.2468, 80 )
+position = Vector2( 63.8308, 86.3158 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 19 )
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scripts/Caldeirao.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Fundos/Caldeirao.png" type="Texture" id=2]
@@ -10,7 +10,9 @@
 [ext_resource path="res://Animations/Redemoinho.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Animations/AnimatedBolha.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Sounds/fire.wav" type="AudioStream" id=10]
-
+[ext_resource path="res://Sounds/borbulheira.wav" type="AudioStream" id=11]
+[ext_resource path="res://Sprites/Medidor/MedidorUmidade.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Medidor/Ponteiro2.png" type="Texture" id=13]
 
 [sub_resource type="Animation" id=1]
 resource_name = "RedemoinhoAnim"
@@ -102,12 +104,13 @@ scale = Vector2( 0.667839, 0.667839 )
 texture = ExtResource( 2 )
 
 [node name="ControladorTemperatura" type="Sprite" parent="Sprite"]
-position = Vector2( 780.532, -419.19 )
-scale = Vector2( 0.700061, 0.700061 )
+position = Vector2( 831.568, -442.833 )
+scale = Vector2( 0.397329, 0.397329 )
 texture = ExtResource( 3 )
 
 [node name="Ponteiro" type="Sprite" parent="Sprite/ControladorTemperatura"]
-position = Vector2( 0, 85.5564 )
+position = Vector2( 0.374023, 156.785 )
+scale = Vector2( 1.34093, 1.34093 )
 texture = ExtResource( 4 )
 
 [node name="ButtonExpandTermometro" type="Button" parent="Sprite/ControladorTemperatura"]
@@ -186,7 +189,7 @@ position = Vector2( 617.683, 272.364 )
 scale = Vector2( 0.218037, 0.207446 )
 
 [node name="AnimatedSprite2" parent="Bolha3" index="0"]
-frame = 0
+frame = 1
 speed_scale = 1.7
 
 [node name="Bolha4" parent="." instance=ExtResource( 9 )]
@@ -199,7 +202,6 @@ position = Vector2( 719.126, 227.523 )
 scale = Vector2( 0.495361, 0.455209 )
 
 [node name="AnimatedSprite2" parent="Bolha5" index="0"]
-frame = 2
 speed_scale = 2.7
 
 [node name="Bolha6" parent="." instance=ExtResource( 9 )]
@@ -211,7 +213,7 @@ position = Vector2( 650.762, 182.682 )
 scale = Vector2( 0.294933, 0.326831 )
 
 [node name="AnimatedSprite2" parent="Bolha7" index="0"]
-frame = 2
+frame = 1
 speed_scale = 2.1
 
 [node name="Bolha8" parent="." instance=ExtResource( 9 )]
@@ -219,7 +221,7 @@ position = Vector2( 783.814, 280.45 )
 scale = Vector2( 0.2993, 0.225329 )
 
 [node name="AnimatedSprite2" parent="Bolha8" index="0"]
-frame = 2
+frame = 0
 speed_scale = 2.4
 
 [node name="TempControl" type="ColorRect" parent="."]
@@ -229,12 +231,13 @@ margin_bottom = 720.0
 color = Color( 0.866667, 0.705882, 0.223529, 1 )
 
 [node name="Sprite" type="Sprite" parent="TempControl"]
-position = Vector2( 624.042, 340.709 )
-scale = Vector2( 2.45115, 2.45115 )
+position = Vector2( 624.042, 275.702 )
+scale = Vector2( 1.24396, 1.24396 )
 texture = ExtResource( 3 )
 
 [node name="Ponteiro" type="Sprite" parent="TempControl/Sprite"]
-position = Vector2( 3.97073, 95.7957 )
+position = Vector2( -2.44202, 145.815 )
+scale = Vector2( 1.40041, 1.40041 )
 texture = ExtResource( 4 )
 
 [node name="ButtonTermControl" type="Button" parent="TempControl/Sprite"]
@@ -245,12 +248,30 @@ margin_bottom = 155.0
 mouse_default_cursor_shape = 2
 flat = true
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="Fogo" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( 633.359, 288.854 )
 stream = ExtResource( 10 )
-volume_db = 4.01
+volume_db = 13.098
 autoplay = true
 max_distance = 100.0
+
+[node name="Borbulheira" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 633.359, 288.854 )
+stream = ExtResource( 11 )
+volume_db = -7.373
+autoplay = true
+max_distance = 100.0
+
+[node name="MedidorUmidade" type="Sprite" parent="."]
+position = Vector2( 77.7013, 64.063 )
+scale = Vector2( 0.403423, 0.403423 )
+texture = ExtResource( 12 )
+
+[node name="PonteiroUmidade" type="Sprite" parent="MedidorUmidade"]
+position = Vector2( 0.397522, 3.97531 )
+rotation = -2.44346
+scale = Vector2( 0.556906, 0.556906 )
+texture = ExtResource( 13 )
 [connection signal="button_down" from="Sprite/ControladorTemperatura/ButtonExpandTermometro" to="." method="_on_ButtonExpandTermometro_button_down"]
 [connection signal="button_down" from="TempControl/Sprite/ButtonTermControl" to="." method="_on_ButtonTermControl_button_down"]
 [connection signal="button_up" from="TempControl/Sprite/ButtonTermControl" to="." method="_on_ButtonTermControl_button_up"]

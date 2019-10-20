@@ -6,6 +6,7 @@ extends Node2D
 onready var tempControl = get_node("TempControl")
 onready var ponteiroGrande = get_node("TempControl/Sprite/Ponteiro")
 onready var ponteiroPequeno = get_node("Sprite/ControladorTemperatura/Ponteiro")
+onready var umidPonteiro = get_node("MedidorUmidade/PonteiroUmidade")
 
 var canRoll = false
 
@@ -16,7 +17,11 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	
+	if(GameManager.regras.setup.umidade>=50):
+		umidPonteiro.rotation_degrees = GameManager.regras.setup.umidade*1.4
+	else:
+		umidPonteiro.rotation_degrees = (GameManager.regras.setup.umidade-50)*2.8
+
 	#verifica se pode mudar a temperatura
 	if(canRoll): 
 		ponteiroGrande.look_at(get_local_mouse_position())
