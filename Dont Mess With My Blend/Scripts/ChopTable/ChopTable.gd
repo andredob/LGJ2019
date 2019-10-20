@@ -26,6 +26,7 @@ func _process(delta):
 			prevPoint = actualPoint
 		else:
 			get_child(0).add_point(actualPoint)
+			print(get_child(0).get_point_count())
 			dist = dist + prevPoint.distance_to(actualPoint)
 	else:
 		if  get_child(0) != null:
