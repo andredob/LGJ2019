@@ -4,7 +4,7 @@ extends Node2D
 # var a = 2
 # var b = "text"
 
-onready var runa = [preload("res://Sprites/Runas/Runa1.png"),
+onready var runas = [preload("res://Sprites/Runas/Runa1.png"),
 preload("res://Sprites/Runas/Runa2.png"),
 preload("res://Sprites/Runas/Runa3.png"),
 preload("res://Sprites/Runas/Runa4.png"),
@@ -32,7 +32,7 @@ func _ready():
 func _process(delta):
 	if(GameManager.showRuna and GameManager.screenCamera == "lareira"):
 		oldRuna = GameManager.regras.setup.runa
-
+		surgeRuna.get_node("Runa").texture = runas[GameManager.regras.setup.runa]
 		surgeRuna.visible = true
 		surgeRuna.get_node("AnimationPlayer").play("BrilhoAnim")
 		GameManager.showRuna = false
