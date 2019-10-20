@@ -25,7 +25,6 @@ GameManager="*res://Scripts/GameManager.gd"
 DayAndNightManager="*res://Scripts/Window/DayAndNightManager.gd"
 Armario="*res://Scripts/Armario.gd"
 setup="*res://Scripts/setup.gd"
-Animais="*res://Scripts/Animais.gd"
 
 [display]
 

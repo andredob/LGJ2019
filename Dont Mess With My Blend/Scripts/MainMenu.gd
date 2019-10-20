@@ -13,9 +13,8 @@ func _ready():
 func _process(delta):
 	
 	time = time + delta
-	print(time)
-	if(time>4):
-		var surgeRuna = get_node("TextureRect/SurgeRuna")
+	if(time>6):
+		var surgeRuna = get_node("SurgeRuna")
 		surgeRuna.position = Vector2((randi()%1180)+100, (randi()%620)+100)
 		surgeRuna.get_node("AnimationPlayer").play("BrilhoAnim")
 		time=0

@@ -189,7 +189,7 @@ position = Vector2( 617.683, 272.364 )
 scale = Vector2( 0.218037, 0.207446 )
 
 [node name="AnimatedSprite2" parent="Bolha3" index="0"]
-frame = 0
+frame = 1
 speed_scale = 1.7
 
 [node name="Bolha4" parent="." instance=ExtResource( 9 )]
@@ -202,7 +202,6 @@ position = Vector2( 719.126, 227.523 )
 scale = Vector2( 0.495361, 0.455209 )
 
 [node name="AnimatedSprite2" parent="Bolha5" index="0"]
-frame = 0
 speed_scale = 2.7
 
 [node name="Bolha6" parent="." instance=ExtResource( 9 )]
@@ -214,7 +213,6 @@ position = Vector2( 650.762, 182.682 )
 scale = Vector2( 0.294933, 0.326831 )
 
 [node name="AnimatedSprite2" parent="Bolha7" index="0"]
-frame = 1
 speed_scale = 2.1
 
 [node name="Bolha8" parent="." instance=ExtResource( 9 )]
