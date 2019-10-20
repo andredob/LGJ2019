@@ -7,8 +7,10 @@ onready var tempControl = get_node("TempControl")
 onready var ponteiroGrande = get_node("TempControl/Sprite/Ponteiro")
 onready var ponteiroPequeno = get_node("Sprite/ControladorTemperatura/Ponteiro")
 onready var umidPonteiro = get_node("MedidorUmidade/PonteiroUmidade")
+onready var caldeiraoClip = get_node("caldeirao")
 
 var canRoll = false
+var oldCaldeiraoLenght = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -17,6 +19,12 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if(GameManager.caldeiraoItems.size()!=oldCaldeiraoLenght):
+		oldCaldeiraoLenght = GameManager.caldeiraoItems.size()
+		caldeiraoClip.play()
+		GameManager.errorMessage = "O item "+GameManager.caldeiraoItems[GameManager.caldeiraoItems.size()-1].nome+" foi colocado no caldeirão"
+	
+	
 	if(GameManager.regras.setup.umidade>=50):
 		umidPonteiro.rotation_degrees = GameManager.regras.setup.umidade*1.4
 	else:

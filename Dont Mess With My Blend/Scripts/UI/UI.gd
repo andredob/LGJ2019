@@ -8,8 +8,7 @@ get_node("InventoryPanel/Items/Item3"),
 get_node("InventoryPanel/Items/Item4")
 ]
 
-
-
+onready var itemSwitch = get_node("AudioStreamPlayer2D")
 
 onready var pause = get_node("Pause")
 
@@ -65,19 +64,23 @@ func _process(delta):
 
 
 func _on_Button1_button_down():
+	itemSwitch.play()
 	jogarItem(0)
 	pass # Replace with function body.
 
 func _on_Button2_button_down():
+	itemSwitch.play()
 	jogarItem(1)
 	pass # Replace with function body.
 
 func _on_Button3_button_down():
+	itemSwitch.play()
 	jogarItem(2)
 	pass # Replace with function body.
 
 
 func _on_Button4_button_down():
+	itemSwitch.play()
 	#chamar função que vai jogar o item no centro da tela (caldeirão, mesa etc)
 	jogarItem(3)
 	pass # Replace with function body.
@@ -89,7 +92,8 @@ func jogarItem(inve):
 				jogar_papel(GameManager.inventario[inve]) 
 				GameManager.inventario[inve] = {"nome": "", "sprite": null, "qtd": 0,"tipo" : ""}
 		"center":
-				GameManager.addItemCaldeirao({"nome": "", "sprite": null, "qtd": 0,"tipo" : ""})
+			GameManager.addItemCaldeirao(GameManager.inventario[inve])
+			GameManager.inventario[inve] = {"nome": "", "sprite": null, "qtd": 0,"tipo" : ""}
 	
 	pass
 func jogar_papel(papel):
@@ -145,8 +149,10 @@ func _on_ButtonMenu_button_down():
 
 
 func _on_Button1_gui_input(event):
+	
 	if event is InputEventMouseButton:
 		if(event.button_index==2):
+			itemSwitch.play()
 			GameManager.inventario[0] = {"nome": "", "sprite": null, "qtd": 0,"tipo" : ""};
 	pass # Replace with function body.
 
@@ -154,18 +160,21 @@ func _on_Button1_gui_input(event):
 func _on_Button2_gui_input(event):
 	if event is InputEventMouseButton:
 		if(event.button_index==2):
+			itemSwitch.play()
 			GameManager.inventario[1] = {"nome": "", "sprite": null, "qtd": 0,"tipo" : ""};
 	pass # Replace with function body.
 
 func _on_Button3_gui_input(event):
 	if event is InputEventMouseButton:
 		if(event.button_index==2):
+			itemSwitch.play()
 			GameManager.inventario[2] = {"nome": "", "sprite": null, "qtd": 0,"tipo" : ""};
 	pass # Replace with function body.
 	
 func _on_Button4_gui_input(event):
 	if event is InputEventMouseButton:
 		if(event.button_index==2):
+			itemSwitch.play()
 			GameManager.inventario[3] = {"nome": "", "sprite": null, "qtd": 0,"tipo" : ""};
 	pass # Replace with function body.
 
