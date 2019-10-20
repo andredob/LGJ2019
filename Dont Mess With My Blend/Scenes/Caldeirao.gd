@@ -26,8 +26,6 @@ func _process(delta):
 			ponteiroGrande.rotation_degrees = 60
 		elif(ponteiroGrande.rotation_degrees < -60):
 			ponteiroGrande.rotation_degrees = -60
-			
-		print(ponteiroGrande.rotation_degrees)
 	else:
 		#atualiza ponteiros locais com o valor do gamemanager
 		ponteiroGrande.rotation_degrees = GameManager.caldeiraoTemperatura-160
