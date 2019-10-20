@@ -29,8 +29,8 @@ func _unhandled_input(event):
 				WritingRoomSprite.visible = true
 				fireplace.visible = false
 				table.visible = false
-			elif(event.scancode == 16777217):
-				null
+			elif(event.scancode == 16777220):
+				paperLabel.text = str(paperLabel.text).substr(0, str(paperLabel.text).length() - 1)
 			elif(str(paperLabel.text).length() < 10 and event.as_text().length() < 2):
 				paperLabel.text = paperLabel.text+str(event.as_text())
 	pass

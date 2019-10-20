@@ -40,12 +40,14 @@ func _on_ButtonExpandTermometro_button_down():
 
 #ao clicar e segurar o ponteiro
 func _on_ButtonTermControl_button_down():
+	GameManager.screenCamera = "temperatura"
 	canRoll = true
 	tempControl.visible = true
 	pass # Replace with function body.
 
 #ao soltar o ponteiro
 func _on_ButtonTermControl_button_up():
+	GameManager.screenCamera = "center"
 	canRoll = false
 	GameManager.caldeiraoTemperatura = ponteiroGrande.rotation_degrees+160
 	GameManager.canShowControls = true
