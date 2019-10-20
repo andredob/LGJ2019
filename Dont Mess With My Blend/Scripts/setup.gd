@@ -5,9 +5,10 @@ extends Node
 #hora: 0-3
 #lua: 0 lua nova , 1 crecente, 2 lua cheia, 3 minguante
 #ummidade: 0-100
+#runa: 0-5
 
 var setup = {
-"umidade":0,"periodo": 0, "anel" : 0, "hora":0 , "lua": 0}
+"umidade":0,"periodo": 0, "anel" : 0, "hora":0 , "lua": 0,"runa":0}
 
 func _init():
 	randomize()
@@ -16,6 +17,7 @@ func _init():
 	setup.anel = randi()%4
 	setup.lua = randi()%4
 	setup.hora = randi()%4
+	setup.runa = randi()%5
 	
 	
 	
@@ -23,7 +25,7 @@ func _init():
 
 func get_runa(palavra):
 	if get_palavra(setup.umidade,setup.periodo) == palavra :
-		return randi()%5
+		return setup.runa
 	return false
 	pass
 

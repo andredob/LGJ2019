@@ -1,8 +1,8 @@
 extends Node
 
 var defaultIcon = preload("res://icon.png")
-const pre_setup = preload("res://Scripts/setup.gd")
-onready var regras = pre_setup.new()
+onready var regras = preload("res://Scripts/setup.gd").new()
+onready var animais = preload("res://Scripts/Animais.gd").new()
 
 var screenCamera = "center"
 var screens = [
@@ -20,7 +20,20 @@ var inventario = [
 ]
 
 func _ready():
-	
-	
-	
+	print(regras.setup)
+	var palavra = regras.get_palavra(regras.setup.umidade,regras.setup.periodo)
+	var runa  = regras.get_runa(palavra)
+	print(palavra)
+	print(runa)
 	pass
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
