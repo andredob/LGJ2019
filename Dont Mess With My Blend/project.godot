@@ -24,6 +24,7 @@ config/icon="res://icon.png"
 GameManager="*res://Scripts/GameManager.gd"
 ChopTable="*res://Scripts/ChopTable/ChopTable.gd"
 DayAndNightManager="*res://Scripts/Window/DayAndNightManager.gd"
+Armario="*res://Scripts/Armario.gd"
 
 [display]
 
@@ -31,14 +32,6 @@ window/size/width=1280
 window/size/height=720
 window/size/resizable=false
 window/stretch/aspect="keep"
-
-[input]
-
-Cut={
-"deadzone": 0.5,
-"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
- ]
-}
 
 [rendering]
 

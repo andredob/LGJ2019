@@ -87,17 +87,17 @@ func get_inten_sequencia(runa,anel):
 		if runa == 2 and anel == 1 :
 			return [1,2,3,0]
 		if runa == 2 and anel == 2 :
-			return [0,1,2,3]
+			return [1,3,2,0]
 		if runa == 2 and anel == 3 :
-			return [0,1,2,3]
+			return [1,3,0,2]
 		if runa == 3 and anel == 0 :
-			return [0,1,2,3]
+			return [2,0,1,3]
 		if runa == 4 and anel == 1 :
-			return [0,1,2,3]
+			return [2,0,3,1]
 		if runa == 5 and anel == 2 :
-			return [0,1,2,3]
+			return [2,1,0,3]
 		if runa == 3 and anel == 3 :
-			return [0,1,2,3]
+			return [2,1,3,0]
 		
 	pass
 func get_animais(anel):
