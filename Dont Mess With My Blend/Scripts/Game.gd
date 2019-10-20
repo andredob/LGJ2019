@@ -13,6 +13,5 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	for screen in GameManager.screens:
-		if(screen.name == GameManager.screenCamera):
 			camera.position = screen.pos
 	pass
