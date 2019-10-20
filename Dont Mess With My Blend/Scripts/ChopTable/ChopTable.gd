@@ -28,7 +28,7 @@ func _process(delta):
 		if prevPoint.x == 0 and prevPoint.y == 0:
 			prevPoint = actualPoint
 		else:
-			line2d.add_point(actualPoint)
+			line2d.add_point(actualPoint - position)
 			print(line2d.get_point_count())
 			dist = dist + prevPoint.distance_to(actualPoint)
 	else:
