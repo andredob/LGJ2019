@@ -64,7 +64,8 @@ func _on_Button_button_down():
 	if get_node("tabua").get_child_count() > 0:
 		get_node("tabua").get_child(0).queue_free()
 	var sapo = pre_sapo.instance()
-	sapo.position =  Vector2(15,160)
+	sapo.position =  Vector2(15,100)
+	sapo.scale = Vector2(0.8,0.8)
 	get_node("tabua").add_child(sapo)
 	
 	pass
@@ -73,7 +74,8 @@ func _on_Button2_button_down():
 	if get_node("tabua").get_child_count() > 0:
 		get_node("tabua").get_child(0).queue_free()
 	var bat = pre_morcego.instance()
-	bat.position =  Vector2(15,160)
+	bat.position =  Vector2(15,100)
+	bat.scale = Vector2(0.8,0.8)
 	get_node("tabua").add_child(bat)
 	pass # Replace with function body.
 
@@ -84,7 +86,8 @@ func _on_Button3_button_down():
 		get_node("tabua").get_child(0).queue_free()
 		
 	var cobra = pre_cobra.instance()
-	cobra.position =  Vector2(15,160)
+	cobra.position =  Vector2(15,100)
+	cobra.scale = Vector2(0.8,0.8)
 	get_node("tabua").add_child(cobra)
 	
 	pass # Replace with function body.
@@ -94,6 +97,7 @@ func _on_Button4_button_down():
 	if get_node("tabua").get_child_count() > 0:
 		get_node("tabua").get_child(0).queue_free()
 	var aranha = pre_aranha.instance()
-	aranha.position =  Vector2(15,160)
+	aranha.position =  Vector2(15,100)
+	aranha.scale = Vector2(0.8,0.8)
 	get_node("tabua").add_child(aranha)
 	pass # Replace with function body.

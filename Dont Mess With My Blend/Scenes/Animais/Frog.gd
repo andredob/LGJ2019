@@ -22,7 +22,7 @@ func corte(array):
 	if array.size() >= 2:
 		if array[0] == $cabeca.position and array[1] == $bochecha.position:
 			print("lingua")
-			GameManager.addItemInventario(partes[2])
+			GameManager.addItemInventario(partes[1])
 		if array[0] == $cabeca.position and array[1] == $ombroD.position:
 			print("secreção")
 			GameManager.addItemInventario(partes[3])
