@@ -1,17 +1,18 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/WritingRoom.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Fundos/Lareira.png" type="Texture" id=2]
 [ext_resource path="res://Animations/AnimatedFire.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Sprites/Fundos/ReadTable.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/Fundos/Paper.png" type="Texture" id=5]
-[ext_resource path="res://Others/IndieFlower-Regular.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Animations/SurgeRuna.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Sprites/Fundos/ReadTable.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Fundos/Paper.png" type="Texture" id=6]
+[ext_resource path="res://Others/IndieFlower-Regular.ttf" type="DynamicFontData" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 size = 230
 outline_color = Color( 0.00392157, 0, 0, 1 )
 use_filter = true
-font_data = ExtResource( 6 )
+font_data = ExtResource( 7 )
 
 [node name="WritingRoom" type="Node2D"]
 script = ExtResource( 1 )
@@ -42,7 +43,6 @@ mouse_default_cursor_shape = 2
 flat = true
 
 [node name="Fireplace" type="Sprite" parent="."]
-visible = false
 position = Vector2( 840.789, 144.569 )
 scale = Vector2( 1.06531, 1.06531 )
 texture = ExtResource( 2 )
@@ -59,19 +59,24 @@ margin_bottom = 326.851
 mouse_default_cursor_shape = 2
 flat = true
 
+[node name="SurgeRuna" parent="Fireplace" instance=ExtResource( 4 )]
+visible = false
+position = Vector2( -213.522, 186.593 )
+scale = Vector2( 0.657086, 0.657086 )
+
 [node name="Table" type="Node2D" parent="."]
 visible = false
 
 [node name="Table" type="Sprite" parent="Table"]
 position = Vector2( 640.353, 361.57 )
 scale = Vector2( 0.675751, 0.675751 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="Paper" type="Sprite" parent="Table/Table"]
 position = Vector2( -33.0092, 49.3727 )
 rotation = -0.0754635
 scale = Vector2( 0.976419, 0.850199 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 
 [node name="Label" type="Label" parent="Table/Table/Paper"]
 margin_left = -692.0

@@ -21,11 +21,12 @@ func _process(delta):
 
 func _unhandled_input(event):
 	if event is InputEventKey:
-		if event.pressed:
+		if event.pressed and GameManager.screenCamera == "table":
 			if(event.scancode == 16777222 or event.scancode == 16777221):
 				print("texto enviado para inventário "+paperLabel.text)
+				GameManager.screenCamera = "left"
 				if(!GameManager.addItemInventario({"nome": "'"+paperLabel.text+"'", "sprite": papelIcon, "qtd": 1, "tipo":"papel", "valor": paperLabel.text})):
-					print("ERRO INVENTÁRIO CHEIO")
+					GameManager.errorMessage = "ERRO: INVENTÁRIO CHEIO"
 				else:
 					GameManager.canShowControls = true
 					WritingRoomSprite.visible = true
@@ -38,6 +39,7 @@ func _unhandled_input(event):
 	pass
 
 func _on_ButtonTable_button_down():
+	GameManager.screenCamera = "table";
 	GameManager.canShowControls = false
 	WritingRoomSprite.visible = false
 	fireplace.visible = false
@@ -55,6 +57,7 @@ func _on_ButtonFireplace_button_down():
 
 
 func _on_ButtonClosePaper_button_down():
+	GameManager.screenCamera = "left"
 	GameManager.canShowControls = true
 	paperLabel.text = ""
 	WritingRoomSprite.visible = true
@@ -64,6 +67,7 @@ func _on_ButtonClosePaper_button_down():
 
 
 func _on_ButtonCloseFireplace_button_down():
+	GameManager.screenCamera = "left"
 	GameManager.canShowControls = true
 	WritingRoomSprite.visible = true
 	fireplace.visible = false

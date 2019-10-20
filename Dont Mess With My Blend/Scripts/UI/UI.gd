@@ -13,9 +13,17 @@ onready var pause = get_node("Pause")
 onready var leftButtonLabel = get_node("LeftScreen/Label")
 onready var rightButtonLabel = get_node("RightScreen/Label")
 
+onready var animationPlayer = get_node("AnimationPlayer")
+onready var labelErro = get_node("LabelErro")
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	
+	if(GameManager.errorMessage!=""):
+		print("tem msg")
+		labelErro.text = GameManager.errorMessage
+		animationPlayer.play("messageError")
+		GameManager.errorMessage = ""
+		
 	if(GameManager.canShowControls):
 		get_node("FrontScreen").visible = true
 		get_node("RightScreen").visible = true
@@ -74,13 +82,14 @@ func _on_Button4_button_down():
 func jogarItem(inve):
 	match GameManager.screenCamera:
 		"lareira":
-			if GameManager.inventario[inve].tipo == "papel" :
+			if GameManager.inventario[inve].tipo == "papel":
 				jogar_papel(GameManager.inventario[inve]) 
 				GameManager.inventario[inve] = {"nome": "", "sprite": null, "qtd": 0,"tipo" : ""};
 	
 	pass
 func jogar_papel(papel):
 	var runa = GameManager.regras.get_runa(papel.valor)
+	
 	if typeof(runa) != TYPE_BOOL:
 		print(runa)
 		#executar animação da Runa
@@ -130,26 +139,26 @@ func _on_ButtonMenu_button_down():
 
 func _on_Button1_gui_input(event):
 	if event is InputEventMouseButton:
-		if event.pressed:
+		if(event.button_index==2):
 			GameManager.inventario[0] = {"nome": "", "sprite": null, "qtd": 0,"tipo" : ""};
 	pass # Replace with function body.
 
 
 func _on_Button2_gui_input(event):
 	if event is InputEventMouseButton:
-		if event.pressed:
+		if(event.button_index==2):
 			GameManager.inventario[1] = {"nome": "", "sprite": null, "qtd": 0,"tipo" : ""};
 	pass # Replace with function body.
 
 func _on_Button3_gui_input(event):
 	if event is InputEventMouseButton:
-		if event.pressed:
+		if(event.button_index==2):
 			GameManager.inventario[2] = {"nome": "", "sprite": null, "qtd": 0,"tipo" : ""};
 	pass # Replace with function body.
 	
 func _on_Button4_gui_input(event):
 	if event is InputEventMouseButton:
-		if event.pressed:
+		if(event.button_index==2):
 			GameManager.inventario[3] = {"nome": "", "sprite": null, "qtd": 0,"tipo" : ""};
 	pass # Replace with function body.
 

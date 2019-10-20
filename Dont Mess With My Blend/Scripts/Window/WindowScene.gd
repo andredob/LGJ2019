@@ -34,47 +34,55 @@ func _process(delta):
 
 func _on_ButtonPoCamomila_button_down():
 	if(!GameManager.addItemInventario(Armario.itens[0])):
+		GameManager.errorMessage = "ERRO: INVENTARIO CHEIO"
 		print("ERRO SEM ESPAÇO NO INVENTARIO!")
 	pass # Replace with function body.
 
 
 func _on_ButtonSemMaracuja_button_down():
 	if(!GameManager.addItemInventario(Armario.itens[1])):
+		GameManager.errorMessage = "ERRO: INVENTARIO CHEIO"
 		print("ERRO SEM ESPAÇO NO INVENTARIO!")
 	pass # Replace with function body.
 
 
 func _on_ButtonAguaBanho_button_down():
 	if(!GameManager.addItemInventario(Armario.itens[2])):
+		GameManager.errorMessage = "ERRO: INVENTARIO CHEIO"
 		print("ERRO SEM ESPAÇO NO INVENTARIO!")
 	pass # Replace with function body.
 
 
 func _on_ButtonCristal_button_down():
 	if(!GameManager.addItemInventario(Armario.itens[3])):
+		GameManager.errorMessage = "ERRO: INVENTARIO CHEIO"
 		print("ERRO SEM ESPAÇO NO INVENTARIO!")
 	pass # Replace with function body.
 
 
 func _on_ButtonPoGuarana_button_down():
 	if(!GameManager.addItemInventario(Armario.itens[4])):
+		GameManager.errorMessage = "ERRO: INVENTARIO CHEIO"
 		print("ERRO SEM ESPAÇO NO INVENTARIO!")
 	pass # Replace with function body.
 
 
 func _on_ButtonSemPapoula_button_down():
 	if(!GameManager.addItemInventario(Armario.itens[5])):
+		GameManager.errorMessage = "ERRO: INVENTARIO CHEIO"
 		print("ERRO SEM ESPAÇO NO INVENTARIO!")
 	pass # Replace with function body.
 
 
 func _on_ButtonSuorGamer_button_down():
 	if(!GameManager.addItemInventario(Armario.itens[6])):
+		GameManager.errorMessage = "ERRO: INVENTARIO CHEIO"
 		print("ERRO SEM ESPAÇO NO INVENTARIO!")
 	pass # Replace with function body.
 
 
 func _on_ButtonCalcio_button_down():
 	if(!GameManager.addItemInventario(Armario.itens[7])):
+		GameManager.errorMessage = "ERRO: INVENTARIO CHEIO"
 		print("ERRO SEM ESPAÇO NO INVENTARIO!")
 	pass # Replace with function body.
