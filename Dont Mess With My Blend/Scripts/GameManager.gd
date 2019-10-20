@@ -16,10 +16,10 @@ var screens = [
 ]
 
 var inventario = [
-{"nome": "", "sprite": defaultIcon, "qtd": 1},
-{"nome": "", "sprite": defaultIcon, "qtd": 1},
-{"nome": "", "sprite": defaultIcon, "qtd": 1},
-{"nome": "", "sprite": defaultIcon, "qtd": 1}, 
+{"nome": "", "sprite": defaultIcon, "qtd": 1, "tipo": ""},
+{"nome": "", "sprite": defaultIcon, "qtd": 1, "tipo": ""},
+{"nome": "", "sprite": defaultIcon, "qtd": 1, "tipo": ""},
+{"nome": "", "sprite": defaultIcon, "qtd": 1, "tipo": ""}, 
 ]
 
 
