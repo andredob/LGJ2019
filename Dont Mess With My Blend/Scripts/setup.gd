@@ -26,6 +26,8 @@ func _init():
 	setup.animais = get_animais(setup.anel)
 	
 	
+	
+	
 	pass
 
 func get_runa(palavra):
@@ -120,6 +122,13 @@ func get_animais(anel):
 			return [1,2]
 	pass
 func get_frasco(runa,dia):
+	pass
+func get_quantidade(item):
+	if setup.periodo == 0:
+		return item.tamanho - (item.tamanho/(setup.hora+1))
+	else:
+		return item.tamanho - (item.tamanho/(setup.lua+1))
+	
 	pass
 
 
