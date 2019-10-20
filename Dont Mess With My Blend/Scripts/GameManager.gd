@@ -1,6 +1,8 @@
 extends Node
 
 var defaultIcon = preload("res://icon.png")
+const pre_setup = preload("res://Scripts/setup.gd")
+onready var regras = pre_setup.new()
 
 var screenCamera = "center"
 var screens = [
