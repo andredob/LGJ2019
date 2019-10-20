@@ -4,7 +4,7 @@ extends Node2D
 # var a = 2
 # var b = "text"
 onready var paperLabel = get_node("Table/Table/Paper/Label")
-onready var scene = get_node("scene")
+onready var WritingRoomSprite = get_node("WritingRoomSprite")
 onready var fireplace = get_node("Fireplace")
 onready var table = get_node("Table")
 
@@ -25,7 +25,8 @@ func _unhandled_input(event):
 				print("enviou o texto "+paperLabel.text)
 				#Mandar o texto para o tratamento das Runas
 			elif(event.scancode == 16777217):
-				scene.visible = true
+				paperLabel.text = ""
+				WritingRoomSprite.visible = true
 				fireplace.visible = false
 				table.visible = false
 			elif(str(paperLabel.text).length() < 10 and event.as_text().length() < 2):
@@ -33,14 +34,14 @@ func _unhandled_input(event):
 	pass
 
 func _on_ButtonTable_button_down():
-	scene.visible = false
+	WritingRoomSprite.visible = false
 	fireplace.visible = false
 	table.visible = true
 	pass # Replace with function body.
 
 
 func _on_ButtonFireplace_button_down():
-	scene.visible = false
+	WritingRoomSprite.visible = false
 	fireplace.visible = true
 	table.visible = false
 	pass # Replace with function body.

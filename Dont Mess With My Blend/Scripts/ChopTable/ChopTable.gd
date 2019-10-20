@@ -1,5 +1,8 @@
 extends Node2D
 
+#nodes
+onready var line2d = get_node("Line2D")
+
 #simplified phats
 var snakePath = "table/Snake"
 var frogPath = "table/Frog"
@@ -25,15 +28,15 @@ func _process(delta):
 		if prevPoint.x == 0 and prevPoint.y == 0:
 			prevPoint = actualPoint
 		else:
-			get_child(0).add_point(actualPoint)
-			print(get_child(0).get_point_count())
+			line2d.add_point(actualPoint)
+			print(line2d.get_point_count())
 			dist = dist + prevPoint.distance_to(actualPoint)
 	else:
-		if  get_child(0) != null:
+		if  line2d != null:
 			if dist >= (perfectDistance*0.2) or dist <= perfectDistance:
 				#ERROU!!!
 				pass
-			get_child(0).clear_points()
+			line2d.clear_points()
 		pass
 	pass
 
