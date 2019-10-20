@@ -2,7 +2,7 @@ extends Node2D
 
 
 var pontoAtual = Vector2()
-
+var partes = Animais.animais[1].partes
 func _ready():
 	randomize()
 	var cor  = randi()%2
@@ -17,6 +17,24 @@ func _ready():
 	else :
 		forma = "Listra"
 	$MorcegoMarronListra.texture = load(str("res://Sprites/ChopTable/Bat/Morcego",cor,forma,".png"))
+	pass
+	
+func corte(array):
+	if array.size() >= 2:
+		if array[0] == $cabeca.position and array[1] == $ombro.position:
+			print("orelha")
+			GameManager.addItemInventario(partes[0])
+		if array[0] == $asaI.position and array[1] == $asaI2.position:
+			print("pata")
+			GameManager.addItemInventario(partes[2])
+		if array[0] == $ombro.position and array[1] == $asaI.position:
+			print("asa")
+			GameManager.addItemInventario(partes[1])
+		if array[0] == $barriga.position and array[1] == $asaI.position:
+			print("coração")
+			GameManager.addItemInventario(partes[3])
+			
+		
 	pass
 
 func _on_cabeca_mouse_entered():
@@ -36,6 +54,7 @@ func _on_ombro_mouse_entered():
 func _on_asaI_mouse_entered():
 	if Input.is_mouse_button_pressed(BUTTON_MASK_RIGHT):
 		pontoAtual = $asaI.position
+	print(pontoAtual)
 	
 	pass # Replace with function body.
 

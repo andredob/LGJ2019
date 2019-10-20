@@ -1,15 +1,17 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Sprites/ChopTable/Snake/AmareloBola.png" type="Texture" id=1]
-[ext_resource path="res://Sprites/Runa.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Animais/Snake.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/ChopTable/Snake/AmareloBola.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Runa.png" type="Texture" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 26.0
 
 [node name="Snake" type="Node2D"]
+script = ExtResource( 1 )
 
-[node name="AmareloBola" type="Sprite" parent="."]
-texture = ExtResource( 1 )
+[node name="sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
 
 [node name="cabeca" type="Area2D" parent="."]
 position = Vector2( -324.387, 26.881 )
@@ -19,7 +21,7 @@ shape = SubResource( 1 )
 
 [node name="Runa" type="Sprite" parent="cabeca"]
 scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="cabeca3" type="Area2D" parent="."]
 position = Vector2( -328.468, -45.2188 )
@@ -29,7 +31,7 @@ shape = SubResource( 1 )
 
 [node name="Runa" type="Sprite" parent="cabeca3"]
 scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="coracao2" type="Area2D" parent="."]
 position = Vector2( -131.721, -180.086 )
@@ -39,7 +41,7 @@ shape = SubResource( 1 )
 
 [node name="Runa" type="Sprite" parent="coracao2"]
 scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="coracao" type="Area2D" parent="."]
 position = Vector2( -180.908, -92.8189 )
@@ -49,7 +51,7 @@ shape = SubResource( 1 )
 
 [node name="Runa" type="Sprite" parent="coracao"]
 scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="pescoso" type="Area2D" parent="."]
 position = Vector2( -253.648, 26.881 )
@@ -59,7 +61,7 @@ shape = SubResource( 1 )
 
 [node name="Runa" type="Sprite" parent="pescoso"]
 scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="callda" type="Area2D" parent="."]
 position = Vector2( 239.454, 34.3148 )
@@ -69,7 +71,7 @@ shape = SubResource( 1 )
 
 [node name="Runa" type="Sprite" parent="callda"]
 scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="callda2" type="Area2D" parent="."]
 position = Vector2( 313.274, 36.3653 )
@@ -79,4 +81,11 @@ shape = SubResource( 1 )
 
 [node name="Runa" type="Sprite" parent="callda2"]
 scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
+[connection signal="mouse_entered" from="cabeca" to="." method="_on_cabeca_mouse_entered"]
+[connection signal="mouse_entered" from="cabeca3" to="." method="_on_cabeca3_mouse_entered"]
+[connection signal="mouse_entered" from="coracao2" to="." method="_on_coracao2_mouse_entered"]
+[connection signal="mouse_entered" from="coracao" to="." method="_on_coracao_mouse_entered"]
+[connection signal="mouse_entered" from="pescoso" to="." method="_on_pescoso_mouse_entered"]
+[connection signal="mouse_entered" from="callda" to="." method="_on_callda_mouse_entered"]
+[connection signal="mouse_entered" from="callda2" to="." method="_on_callda2_mouse_entered"]
