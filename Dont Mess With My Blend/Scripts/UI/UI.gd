@@ -126,3 +126,31 @@ func _on_ButtonMenu_button_down():
 	pause.visible = false
 	get_tree().change_scene("res://Scenes/MainMenu.tscn")
 	pass # Replace with function body.
+
+
+func _on_Button1_gui_input(event):
+	if event is InputEventMouseButton:
+		if event.pressed:
+			GameManager.inventario[0] = {"nome": "", "sprite": null, "qtd": 0,"tipo" : ""};
+	pass # Replace with function body.
+
+
+func _on_Button2_gui_input(event):
+	if event is InputEventMouseButton:
+		if event.pressed:
+			GameManager.inventario[1] = {"nome": "", "sprite": null, "qtd": 0,"tipo" : ""};
+	pass # Replace with function body.
+
+func _on_Button3_gui_input(event):
+	if event is InputEventMouseButton:
+		if event.pressed:
+			GameManager.inventario[2] = {"nome": "", "sprite": null, "qtd": 0,"tipo" : ""};
+	pass # Replace with function body.
+	
+func _on_Button4_gui_input(event):
+	if event is InputEventMouseButton:
+		if event.pressed:
+			GameManager.inventario[3] = {"nome": "", "sprite": null, "qtd": 0,"tipo" : ""};
+	pass # Replace with function body.
+
+

@@ -510,9 +510,13 @@ text = "Pause"
 align = 1
 valign = 1
 [connection signal="button_down" from="InventoryPanel/Items/Item1/Button1" to="." method="_on_Button1_button_down"]
+[connection signal="gui_input" from="InventoryPanel/Items/Item1/Button1" to="." method="_on_Button1_gui_input"]
 [connection signal="button_down" from="InventoryPanel/Items/Item2/Button2" to="." method="_on_Button2_button_down"]
+[connection signal="gui_input" from="InventoryPanel/Items/Item2/Button2" to="." method="_on_Button2_gui_input"]
 [connection signal="button_down" from="InventoryPanel/Items/Item3/Button3" to="." method="_on_Button3_button_down"]
+[connection signal="gui_input" from="InventoryPanel/Items/Item3/Button3" to="." method="_on_Button3_gui_input"]
 [connection signal="button_down" from="InventoryPanel/Items/Item4/Button4" to="." method="_on_Button4_button_down"]
+[connection signal="gui_input" from="InventoryPanel/Items/Item4/Button4" to="." method="_on_Button4_gui_input"]
 [connection signal="button_down" from="RightScreen/RightScreenButton" to="." method="_on_RightScreenButton_button_down"]
 [connection signal="button_down" from="LeftScreen/LeftScreenButton" to="." method="_on_LeftScreenButton_button_down"]
 [connection signal="button_down" from="FrontScreen/FrontScreenButton" to="." method="_on_FrontScreenButton_button_down"]
