@@ -111,7 +111,7 @@ __meta__ = {
 position = Vector2( 189.976, 416.138 )
 
 [node name="PoCamomila" type="Sprite" parent="Ingredientes"]
-position = Vector2( -100, -120 )
+position = Vector2( -5.46436, -120 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 12 )
 
@@ -120,10 +120,11 @@ margin_left = -210.0
 margin_top = -206.0
 margin_right = 246.0
 margin_bottom = 239.0
+mouse_default_cursor_shape = 2
 flat = true
 
 [node name="SementeMaracuja" type="Sprite" parent="Ingredientes"]
-position = Vector2( 100, -120 )
+position = Vector2( 145.426, -120 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 13 )
 
@@ -132,10 +133,11 @@ margin_left = -217.96
 margin_top = -220.32
 margin_right = 238.04
 margin_bottom = 224.68
+mouse_default_cursor_shape = 2
 flat = true
 
 [node name="AguaBanho" type="Sprite" parent="Ingredientes"]
-position = Vector2( -100, 80 )
+position = Vector2( -5.46436, 80 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 14 )
 
@@ -144,10 +146,11 @@ margin_left = -210.0
 margin_top = -218.733
 margin_right = 246.0
 margin_bottom = 226.267
+mouse_default_cursor_shape = 2
 flat = true
 
 [node name="Cristal" type="Sprite" parent="Ingredientes"]
-position = Vector2( 100, 80 )
+position = Vector2( 145.426, 80 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 15 )
 
@@ -156,25 +159,27 @@ margin_left = -213.187
 margin_top = -223.507
 margin_right = 242.813
 margin_bottom = 221.493
+mouse_default_cursor_shape = 2
 flat = true
 
 [node name="ContraIngredientes" type="Node2D" parent="."]
 position = Vector2( 1079.71, 420.999 )
 
 [node name="PoDeGuarana" type="Sprite" parent="ContraIngredientes"]
-position = Vector2( -100, -120 )
+position = Vector2( -120.872, -120 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 16 )
 
 [node name="ButtonPoGuarana" type="Button" parent="ContraIngredientes/PoDeGuarana"]
-margin_left = -211.588
+margin_left = -215.68
 margin_top = -217.432
-margin_right = 244.412
+margin_right = 240.32
 margin_bottom = 227.568
+mouse_default_cursor_shape = 2
 flat = true
 
 [node name="SementeDePapoula" type="Sprite" parent="ContraIngredientes"]
-position = Vector2( 100, -120 )
+position = Vector2( 31.2468, -120 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 17 )
 
@@ -183,10 +188,11 @@ margin_left = -214.774
 margin_top = -212.659
 margin_right = 241.226
 margin_bottom = 232.341
+mouse_default_cursor_shape = 2
 flat = true
 
 [node name="SuorDeGamer" type="Sprite" parent="ContraIngredientes"]
-position = Vector2( -100, 80 )
+position = Vector2( -120.872, 80 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 18 )
 
@@ -195,10 +201,11 @@ margin_left = -225.907
 margin_top = -225.393
 margin_right = 230.093
 margin_bottom = 219.607
+mouse_default_cursor_shape = 2
 flat = true
 
 [node name="Calcio" type="Sprite" parent="ContraIngredientes"]
-position = Vector2( 100, 80 )
+position = Vector2( 31.2468, 80 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 19 )
 
@@ -207,6 +214,7 @@ margin_left = -219.548
 margin_top = -225.393
 margin_right = 236.452
 margin_bottom = 219.607
+mouse_default_cursor_shape = 2
 flat = true
 [connection signal="button_down" from="Ingredientes/PoCamomila/ButtonPoCamomila" to="." method="_on_ButtonPoCamomila_button_down"]
 [connection signal="button_down" from="Ingredientes/SementeMaracuja/ButtonSemMaracuja" to="." method="_on_ButtonSemMaracuja_button_down"]

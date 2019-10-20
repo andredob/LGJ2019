@@ -159,7 +159,6 @@ theme = ExtResource( 3 )
 text = "Sapo perereca"
 valign = 2
 clip_text = true
-percent_visible = -0.0833333
 
 [node name="Button1" type="Button" parent="InventoryPanel/Items/Item1"]
 anchor_right = 1.0
@@ -202,7 +201,6 @@ margin_top = -16.0
 margin_right = 47.5
 theme = ExtResource( 3 )
 text = "Sapo perereca"
-align = 1
 valign = 2
 clip_text = true
 
@@ -248,7 +246,6 @@ margin_top = -16.0
 margin_right = 47.5
 theme = ExtResource( 3 )
 text = "Sapo perereca"
-align = 1
 valign = 2
 clip_text = true
 
@@ -293,7 +290,6 @@ margin_top = -16.0
 margin_right = 47.5
 theme = ExtResource( 3 )
 text = "Sapo perereca"
-align = 1
 valign = 2
 clip_text = true
 
