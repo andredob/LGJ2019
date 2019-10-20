@@ -46,25 +46,41 @@ func _process(delta):
 
 func _on_Button1_button_down():
 	#chamar função que vai jogar o item no centro da tela (caldeirão, mesa etc)
-	GameManager.inventario[0] = {"nome": "", "sprite": null, "qtd": 0};
+	GameManager.inventario[0] = {"nome": "", "sprite": null, "qtd": 0,"tipo" : ""};
 	pass # Replace with function body.
 
 func _on_Button2_button_down():
 	#chamar função que vai jogar o item no centro da tela (caldeirão, mesa etc)
-	GameManager.inventario[1] = {"nome": "", "sprite": null, "qtd": 0};
+	GameManager.inventario[1] = {"nome": "", "sprite": null, "qtd": 0,"tipo" : ""};
 	pass # Replace with function body.
 
 func _on_Button3_button_down():
 	#chamar função que vai jogar o item no centro da tela (caldeirão, mesa etc)
-	GameManager.inventario[2] = {"nome": "", "sprite": null, "qtd": 0};
+	GameManager.inventario[2] = {"nome": "", "sprite": null, "qtd": 0,"tipo" : ""};
 	pass # Replace with function body.
 
 
 func _on_Button4_button_down():
 	#chamar função que vai jogar o item no centro da tela (caldeirão, mesa etc)
-	GameManager.inventario[3] = {"nome": "", "sprite": null, "qtd": 0};
+	Button_button_down(3)
 	pass # Replace with function body.
-
+	
+func Button_button_down(inve):
+	match GameManager.screenCamera:
+		"lareira":
+			if GameManager.inventario[inve].tipo == "papel" :
+				jogar_papel(GameManager.inventario[inve]) 
+	
+	pass
+func jogar_papel(papel):
+	var runa = GameManager.regras.get_runa(papel.valor)
+	if typeof(runa) != TYPE_BOOL:
+		print(runa)
+		print("runa certa")
+	else : 
+		print("runa errada")
+		
+	pass
 
 func _on_FrontScreenButton_button_down():
 	#Change camera to front screen
