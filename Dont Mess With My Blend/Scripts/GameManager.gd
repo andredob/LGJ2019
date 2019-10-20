@@ -4,6 +4,8 @@ var defaultIcon = preload("res://icon.png")
 onready var regras = preload("res://Scripts/setup.gd").new()
 onready var animais = preload("res://Scripts/Animais.gd").new()
 
+var canShowControls = true
+
 var barraDeQualidade = 100
 
 var screenCamera = "center"
@@ -16,13 +18,19 @@ var screens = [
 ]
 
 var inventario = [
-{"nome": "", "sprite": defaultIcon, "qtd": 1, "tipo": ""},
-{"nome": "", "sprite": defaultIcon, "qtd": 1, "tipo": ""},
-{"nome": "", "sprite": defaultIcon, "qtd": 1, "tipo": ""},
-{"nome": "", "sprite": defaultIcon, "qtd": 1, "tipo": ""}, 
+{"nome": "", "sprite": null, "qtd": 0, "tipo": "", "valor":""},
+{"nome": "", "sprite": null, "qtd": 0, "tipo": "", "valor":""},
+{"nome": "", "sprite": null, "qtd": 0, "tipo": "", "valor":""},
+{"nome": "", "sprite": null, "qtd": 0, "tipo": "", "valor":""}, 
 ]
 
-
+func addItemInventario(itemExterno):
+	for i in range(3):
+		if(inventario[i].nome=="" or inventario[i].sprite==null):
+			inventario[i] = itemExterno
+			break
+			pass
+		pass
 	
 	
 	

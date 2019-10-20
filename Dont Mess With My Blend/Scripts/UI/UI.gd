@@ -16,6 +16,15 @@ onready var rightButtonLabel = get_node("RightScreen/Label")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
+	if(GameManager.canShowControls):
+		get_node("FrontScreen").visible = true
+		get_node("RightScreen").visible = true
+		get_node("LeftScreen").visible = true
+	else:
+		get_node("FrontScreen").visible = false
+		get_node("RightScreen").visible = false
+		get_node("LeftScreen").visible = false
+		
 	if(Input.is_action_just_pressed("ui_cancel")):
 		print("pause"+str(get_tree().paused))
 		if(get_tree().paused):
@@ -45,39 +54,39 @@ func _process(delta):
 
 
 func _on_Button1_button_down():
-	#chamar função que vai jogar o item no centro da tela (caldeirão, mesa etc)
-	GameManager.inventario[0] = {"nome": "", "sprite": null, "qtd": 0,"tipo" : ""};
+	jogarItem(0)
 	pass # Replace with function body.
 
 func _on_Button2_button_down():
-	#chamar função que vai jogar o item no centro da tela (caldeirão, mesa etc)
-	GameManager.inventario[1] = {"nome": "", "sprite": null, "qtd": 0,"tipo" : ""};
+	jogarItem(1)
 	pass # Replace with function body.
 
 func _on_Button3_button_down():
-	#chamar função que vai jogar o item no centro da tela (caldeirão, mesa etc)
-	GameManager.inventario[2] = {"nome": "", "sprite": null, "qtd": 0,"tipo" : ""};
+	jogarItem(2)
 	pass # Replace with function body.
 
 
 func _on_Button4_button_down():
 	#chamar função que vai jogar o item no centro da tela (caldeirão, mesa etc)
-	Button_button_down(3)
+	jogarItem(3)
 	pass # Replace with function body.
 	
-func Button_button_down(inve):
+func jogarItem(inve):
 	match GameManager.screenCamera:
 		"lareira":
 			if GameManager.inventario[inve].tipo == "papel" :
 				jogar_papel(GameManager.inventario[inve]) 
+				GameManager.inventario[inve] = {"nome": "", "sprite": null, "qtd": 0,"tipo" : ""};
 	
 	pass
 func jogar_papel(papel):
 	var runa = GameManager.regras.get_runa(papel.valor)
 	if typeof(runa) != TYPE_BOOL:
 		print(runa)
+		#executar animação da Runa
 		print("runa certa")
 	else : 
+		#executar animação de Runa falha
 		print("runa errada")
 		
 	pass

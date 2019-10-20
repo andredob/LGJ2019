@@ -7,8 +7,8 @@
 [ext_resource path="res://Others/IndieFlower-Regular.ttf" type="DynamicFontData" id=5]
 
 [sub_resource type="DynamicFont" id=1]
-size = 250
-outline_color = Color( 0, 0, 0, 1 )
+size = 350
+outline_color = Color( 0.00392157, 0, 0, 1 )
 use_filter = true
 font_data = ExtResource( 5 )
 
@@ -37,10 +37,17 @@ mouse_default_cursor_shape = 2
 flat = true
 
 [node name="Fireplace" type="Sprite" parent="."]
-visible = false
-position = Vector2( 804.553, 216.139 )
-scale = Vector2( 0.932774, 0.932774 )
+position = Vector2( 840.789, 144.569 )
+scale = Vector2( 1.06531, 1.06531 )
 texture = ExtResource( 2 )
+
+[node name="ButtonCloseFireplace" type="Button" parent="Fireplace"]
+margin_left = -467.079
+margin_top = 61.8506
+margin_right = 71.9213
+margin_bottom = 326.851
+mouse_default_cursor_shape = 2
+flat = true
 
 [node name="Table" type="Node2D" parent="."]
 visible = false
@@ -65,5 +72,15 @@ custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.337255, 0.290196, 0.231373, 1 )
 align = 1
 valign = 1
+
+[node name="ButtonClosePaper" type="Button" parent="Table"]
+margin_left = 191.112
+margin_top = 253.726
+margin_right = 1052.11
+margin_bottom = 546.726
+mouse_default_cursor_shape = 2
+flat = true
 [connection signal="button_down" from="WritingRoomSprite/ButtonTable" to="." method="_on_ButtonTable_button_down"]
 [connection signal="button_down" from="WritingRoomSprite/ButtonFireplace" to="." method="_on_ButtonFireplace_button_down"]
+[connection signal="button_down" from="Fireplace/ButtonCloseFireplace" to="." method="_on_ButtonCloseFireplace_button_down"]
+[connection signal="button_down" from="Table/ButtonClosePaper" to="." method="_on_ButtonClosePaper_button_down"]
