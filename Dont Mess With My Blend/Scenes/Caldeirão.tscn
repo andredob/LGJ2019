@@ -194,7 +194,6 @@ position = Vector2( 783.814, 280.45 )
 scale = Vector2( 0.2993, 0.225329 )
 
 [node name="AnimatedSprite2" parent="Bolha8" index="0"]
-frame = 1
 speed_scale = 2.4
 
 [editable path="Redemoinho3"]
