@@ -87,7 +87,9 @@ func jogarItem(inve):
 		"lareira":
 			if GameManager.inventario[inve].tipo == "papel":
 				jogar_papel(GameManager.inventario[inve]) 
-				GameManager.inventario[inve] = {"nome": "", "sprite": null, "qtd": 0,"tipo" : ""};
+				GameManager.inventario[inve] = {"nome": "", "sprite": null, "qtd": 0,"tipo" : ""}
+		"center":
+				GameManager.addItemCaldeirao({"nome": "", "sprite": null, "qtd": 0,"tipo" : ""})
 	
 	pass
 func jogar_papel(papel):

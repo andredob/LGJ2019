@@ -23,13 +23,18 @@ var screens = [
 {"name": "temperatura", "pos": Vector2(640, 360)},
 ]
 
+var caldeiraoItems = []
+
 var inventario = [
 {"nome": "", "sprite": null, "tipo":"", "tamanho" : 0},
 {"nome": "", "sprite": null, "tipo":"", "tamanho" : 0},
 {"nome": "", "sprite": null, "tipo":"", "tamanho" : 0},
 {"nome": "", "sprite": null, "tipo":"", "tamanho" : 0}, 
 ]
-
+func addItemCaldeirao(itemExterno):
+	caldeiraoItems.append(itemExterno)
+	pass
+	
 func addItemInventario(itemExterno):
 	var hasSpace = false
 	for i in range(4):

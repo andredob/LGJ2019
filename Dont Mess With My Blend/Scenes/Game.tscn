@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/Game.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/WritingRoom.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Scenes/Caldeirao.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/UI.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Pause.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Sounds/GameTheme.wav" type="AudioStream" id=8]
 
 [node name="Game" type="Node"]
 script = ExtResource( 1 )
@@ -39,3 +40,7 @@ margin_right = -639.0
 margin_bottom = -360.0
 
 [node name="Pause" parent="Camera2D/UI" instance=ExtResource( 7 )]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+autoplay = true

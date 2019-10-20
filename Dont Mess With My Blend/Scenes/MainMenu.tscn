@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Animations/SurgeRuna.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Others/PanelFonte.tres" type="DynamicFont" id=4]
 [ext_resource path="res://images/alchemy circle.png" type="Texture" id=5]
 [ext_resource path="res://Others/MenuLogoFont.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Sounds/GameTheme.wav" type="AudioStream" id=7]
 
 [sub_resource type="StyleBoxTexture" id=7]
 texture = ExtResource( 3 )
@@ -16,7 +17,7 @@ Panel/styles/panel = SubResource( 7 )
 Panel/styles/panelf = null
 Panel/styles/panelnc = null
 
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id=8]
 bg_color = Color( 0.0588235, 0.054902, 0.054902, 0.635294 )
 border_width_left = 1
 border_width_top = 1
@@ -26,7 +27,7 @@ border_color = Color( 0, 0, 0, 1 )
 corner_radius_top_left = 10
 corner_radius_bottom_right = 10
 
-[sub_resource type="StyleBoxFlat" id=4]
+[sub_resource type="StyleBoxFlat" id=9]
 draw_center = false
 border_width_left = 2
 border_width_top = 2
@@ -36,7 +37,7 @@ border_color = Color( 0, 0, 0, 0.192157 )
 corner_radius_top_left = 10
 corner_radius_bottom_right = 10
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=10]
 bg_color = Color( 0.0588235, 0.054902, 0.054902, 0.635294 )
 border_width_left = 1
 border_width_top = 1
@@ -46,7 +47,7 @@ border_color = Color( 0, 0, 0, 1 )
 corner_radius_top_left = 10
 corner_radius_bottom_right = 10
 
-[sub_resource type="StyleBoxFlat" id=6]
+[sub_resource type="StyleBoxFlat" id=11]
 bg_color = Color( 0.0588235, 0.054902, 0.054902, 0.635294 )
 border_width_left = 1
 border_width_top = 1
@@ -77,7 +78,6 @@ position = Vector2( 872.388, 358.838 )
 scale = Vector2( 0.282477, 0.282477 )
 
 [node name="Brilho" parent="SurgeRuna" index="1"]
-visible = false
 scale = Vector2( 0.459774, 0.459774 )
 
 [node name="Brilho2" parent="SurgeRuna" index="2"]
@@ -96,8 +96,8 @@ margin_top = 72.5945
 margin_right = 241.738
 margin_bottom = 122.595
 mouse_default_cursor_shape = 2
-custom_styles/hover = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/normal = SubResource( 9 )
 custom_fonts/font = ExtResource( 4 )
 text = "Jogar"
 
@@ -107,8 +107,8 @@ margin_top = 142.595
 margin_right = 241.738
 margin_bottom = 192.595
 mouse_default_cursor_shape = 2
-custom_styles/hover = SubResource( 5 )
-custom_styles/normal = SubResource( 4 )
+custom_styles/hover = SubResource( 10 )
+custom_styles/normal = SubResource( 9 )
 custom_fonts/font = ExtResource( 4 )
 text = "Credits"
 
@@ -118,8 +118,8 @@ margin_top = 212.595
 margin_right = 241.738
 margin_bottom = 262.595
 mouse_default_cursor_shape = 2
-custom_styles/hover = SubResource( 6 )
-custom_styles/normal = SubResource( 4 )
+custom_styles/hover = SubResource( 11 )
+custom_styles/normal = SubResource( 9 )
 custom_fonts/font = ExtResource( 4 )
 text = "Sair"
 
@@ -154,6 +154,10 @@ custom_fonts/font = ExtResource( 6 )
 text = "Don't Mess With My Blend"
 align = 1
 autowrap = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+autoplay = true
 [connection signal="button_down" from="Panel/ButtonJogar" to="." method="_on_ButtonJogar_button_down"]
 [connection signal="button_down" from="Panel/ButtonCreditos" to="." method="_on_ButtonCreditos_button_down"]
 [connection signal="button_down" from="Panel/ButtonSair" to="." method="_on_ButtonSair_button_down"]
