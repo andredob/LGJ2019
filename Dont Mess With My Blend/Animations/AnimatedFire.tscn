@@ -12,7 +12,7 @@ animations = [ {
 "speed": 3.0
 } ]
 
-[node name="Node2D" type="Node2D"]
+[node name="Fire" type="Node2D"]
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
 position = Vector2( -165.014, -179.294 )
@@ -24,7 +24,7 @@ playing = true
 [node name="AnimatedSprite3" type="AnimatedSprite" parent="."]
 position = Vector2( 157.081, -166.601 )
 frames = SubResource( 1 )
-frame = 1
+frame = 2
 speed_scale = 1.5
 playing = true
 
@@ -39,5 +39,5 @@ playing = true
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -6.34668, -120.587 )
 frames = SubResource( 1 )
-frame = 1
+frame = 2
 playing = true
