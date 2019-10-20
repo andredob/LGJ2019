@@ -21,10 +21,6 @@ var inventario = [
 
 func _ready():
 	print(regras.setup)
-	var palavra = regras.get_palavra(regras.setup.umidade,regras.setup.periodo)
-	var runa  = regras.get_runa(palavra)
-	print(palavra)
-	print(runa)
 	pass
 	
 	

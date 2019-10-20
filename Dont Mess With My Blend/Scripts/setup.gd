@@ -8,7 +8,8 @@ extends Node
 #runa: 0-5
 
 var setup = {
-"umidade":0,"periodo": 0, "anel" : 0, "hora":0 , "lua": 0,"runa":0}
+"umidade":0,"periodo": 0, "anel" : 0, "hora":0 , "lua": 0,"runa":0 , "palavra": "","temperatura" : 0,"item_sequencia": [],
+"animais" : [],"frasco" :0}
 
 func _init():
 	randomize()
@@ -18,7 +19,11 @@ func _init():
 	setup.lua = randi()%4
 	setup.hora = randi()%4
 	setup.runa = randi()%5
-	
+	setup.palavra = get_palavra(setup.umidade,setup.periodo)
+	setup.runa  = get_runa(setup.palavra)
+	setup.temperatura = get_temperatura(setup.runa)
+	setup.item_sequencia = get_inten_sequencia(setup.runa,setup.anel)
+	setup.animais = get_animais(setup.anel)
 	
 	
 	pass
@@ -30,7 +35,7 @@ func get_runa(palavra):
 	pass
 
 func get_temperatura(runa):
-	if runa != false:
+	if typeof(runa) != TYPE_BOOL:
 		if runa == 0:
 			return 100
 		if runa == 1:
