@@ -3,6 +3,9 @@ extends Node2D
 #nodes
 onready var line2d = get_node("Line2D")
 
+var corte = []
+var cortePosition = Vector2()
+
 #simplified phats
 var snakePath = "table/Snake"
 var frogPath = "table/Frog"
@@ -23,21 +26,25 @@ var perfectDistance = 300
 
 #calculate the distance between two points and add a new point to the cut
 func _process(delta):
-	actualPoint = get_global_mouse_position()
-	if cut:
-		if prevPoint.x == 0 and prevPoint.y == 0:
-			prevPoint = actualPoint
-		else:
-			line2d.add_point(actualPoint - position)
-			print(line2d.get_point_count())
-			dist = dist + prevPoint.distance_to(actualPoint)
-	else:
-		if  line2d != null:
-			if dist >= (perfectDistance*0.2) or dist <= perfectDistance:
-				#ERROU!!!
-				pass
-			line2d.clear_points()
-		pass
+	
+	if get_node("tabua").get_child_count() > 0:
+		
+		if not Input.is_mouse_button_pressed(BUTTON_RIGHT):
+			if corte.size() >=2:
+				get_node("tabua").get_child(0).corte(corte)
+				print(corte)
+			corte.clear()
+			cortePosition = Vector2()
+			get_node("tabua").get_child(0).pontoAtual = Vector2()
+			
+				
+		
+		if cortePosition != get_node("tabua").get_child(0).pontoAtual:
+			print("ponto")
+			corte.append(get_node("tabua").get_child(0).pontoAtual)
+			cortePosition = get_node("tabua").get_child(0).pontoAtual
+		
+			
 	pass
 
 #makes that just when the mouse is pressed is possible to cut
@@ -48,28 +55,45 @@ func _input(event):
 		cut = false
 	pass
 
-#randonly select the sprite to be show for the selected animal
-func _on_Button_button_down(animalName):
-	var rng = RandomNumberGenerator.new()
-	rng.randomize()
-	var rand = rng.randi_range(0,4)
-	if animalName == "frog":
-		get_node(frogPath).frame = rand
-		get_node(frogPath).visible = true
-	elif animalName == "bat":
-		get_node(batPath).frame = rand
-		get_node(batPath).visible = true
-	elif animalName == "snake":
-		get_node(snakePath).frame = rand
-		get_node(snakePath).visible = true
-	elif animalName == "spider":
-		get_node(spiderPath).frame = rand
-		get_node(spiderPath).visible = true
-	cutting = true
-	_disable_shelf_itens()
+var pre_sapo = preload("res://Scenes/Animais/Frog.tscn")
+var pre_morcego = preload("res://Scenes/Animais/Bat.tscn")
+var pre_cobra = preload("res://Scenes/Animais/Snake.tscn")
+var pre_aranha = preload("res://Scenes/Animais/Spider.tscn")
+
+func _on_Button_button_down():
+	if get_node("tabua").get_child_count() > 0:
+		get_node("tabua").get_child(0).queue_free()
+	var sapo = pre_sapo.instance()
+	sapo.position =  Vector2(15,160)
+	get_node("tabua").add_child(sapo)
+	
 	pass
+	
+func _on_Button2_button_down():
+	if get_node("tabua").get_child_count() > 0:
+		get_node("tabua").get_child(0).queue_free()
+	var bat = pre_morcego.instance()
+	bat.position =  Vector2(15,160)
+	get_node("tabua").add_child(bat)
+	pass # Replace with function body.
 
-func _disable_shelf_itens():
-	for children in get_node("Shelf").get_children():
-		children.get_child(0).disabled = true
 
+func _on_Button3_button_down():
+	if get_node("tabua").get_child_count() > 0:
+		print(get_node("tabua").get_child_count())
+		get_node("tabua").get_child(0).queue_free()
+		
+	var cobra = pre_cobra.instance()
+	cobra.position =  Vector2(15,160)
+	get_node("tabua").add_child(cobra)
+	
+	pass # Replace with function body.
+
+
+func _on_Button4_button_down():
+	if get_node("tabua").get_child_count() > 0:
+		get_node("tabua").get_child(0).queue_free()
+	var aranha = pre_aranha.instance()
+	aranha.position =  Vector2(15,160)
+	get_node("tabua").add_child(aranha)
+	pass # Replace with function body.

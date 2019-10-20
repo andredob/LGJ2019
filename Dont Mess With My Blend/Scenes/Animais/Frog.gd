@@ -22,13 +22,13 @@ func corte(array):
 	if array.size() >= 2:
 		if array[0] == $cabeca.position and array[1] == $bochecha.position:
 			print("lingua")
-			GameManager.addItemInventario(partes[3])
+			GameManager.addItemInventario(partes[2])
 		if array[0] == $cabeca.position and array[1] == $ombroD.position:
 			print("secreção")
-			GameManager.addItemInventario(partes[0])
+			GameManager.addItemInventario(partes[3])
 		if array[0] == $ombroD.position and array[1] == $Barriga.position:
 			print("coração")
-			GameManager.addItemInventario(partes[1])
+			GameManager.addItemInventario(partes[0])
 		if array[0] == $pataS.position and array[1] == $pataI.position:
 			print("pata")
 			GameManager.addItemInventario(partes[2])

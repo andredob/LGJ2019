@@ -14,21 +14,21 @@ func _ready():
 	if forma == 0:
 		forma = "Bolinhas"
 	else :
-		forma = "Listra"
+		forma = "Listras"
 	$sprite.texture = load(str("res://Sprites/ChopTable/Spider/Aranha",cor,forma,".png"))
 	pass
 	
 func corte(array):
 	if array.size() >= 2:
 		if array[0] == $bunda.position and array[1] == $bunda2.position:
-			print("teia")
+		
 			GameManager.addItemInventario(partes[0])
 		if array[0] == $pata.position and array[1] == $pata2.position:
 			print("pata")
-			GameManager.addItemInventario(partes[2])
+			GameManager.addItemInventario(partes[1])
 		if array[0] == $presa.position and array[1] == $presa2.position:
 			print("presa")
-			GameManager.addItemInventario(partes[1])
+			GameManager.addItemInventario(partes[2])
 		if array.size()>3:
 			if array[0] == $presa.position and array[1] == $bunda.position and  array[2] == $bunda2.position and array[3] == $presa2.position:
 				print("pelo")

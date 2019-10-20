@@ -1,61 +1,8 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/ChopTable/ChopTable.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/ChopTable/ChopTable.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/ChopTable/Snake/AmareloBola.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/ChopTable/Snake/AmareloListra.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/ChopTable/Snake/AzulBola.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/ChopTable/Snake/AzulListra.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/ChopTable/Snake/CobraPontos.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/ChopTable/Frog/AzulBola.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/ChopTable/Frog/AzulListra.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/ChopTable/Frog/VerdeBola.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/ChopTable/Frog/VerdeListra.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/ChopTable/Frog/FrogPontos.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/ChopTable/Bat/MorcegoAmareloBola.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/ChopTable/Bat/MorcegoAmareloListra.png" type="Texture" id=14]
-[ext_resource path="res://Sprites/ChopTable/Bat/MorcegoMarronBola.png" type="Texture" id=15]
-[ext_resource path="res://Sprites/ChopTable/Bat/MorcegoMarronListra.png" type="Texture" id=16]
-[ext_resource path="res://Sprites/ChopTable/Bat/MorcegoPontos.png" type="Texture" id=17]
-[ext_resource path="res://Sprites/ChopTable/Spider/AranhaAmarelaBolinhas.png" type="Texture" id=18]
-[ext_resource path="res://Sprites/ChopTable/Spider/AranhaAmarelaListras.png" type="Texture" id=19]
-[ext_resource path="res://Sprites/ChopTable/Spider/AranhaMarromBolinhas.png" type="Texture" id=20]
-[ext_resource path="res://Sprites/ChopTable/Spider/AranhaMarromListras.png" type="Texture" id=21]
-[ext_resource path="res://Sprites/ChopTable/Spider/AranhaPontos.png" type="Texture" id=22]
-[ext_resource path="res://Sprites/TestSprites/ChopTable/frog.png" type="Texture" id=23]
-[ext_resource path="res://Scripts/ChopTable/frog.gd" type="Script" id=24]
-
-[sub_resource type="SpriteFrames" id=1]
-animations = [ {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-} ]
-
-[sub_resource type="SpriteFrames" id=2]
-animations = [ {
-"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-} ]
-
-[sub_resource type="SpriteFrames" id=3]
-animations = [ {
-"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-} ]
-
-[sub_resource type="SpriteFrames" id=4]
-animations = [ {
-"frames": [ ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-} ]
+[ext_resource path="res://Sprites/TestSprites/ChopTable/frog.png" type="Texture" id=3]
 
 [node name="ChopTable" type="Node2D"]
 script = ExtResource( 1 )
@@ -65,113 +12,61 @@ z_index = 1
 default_color = Color( 0.4, 0.501961, 1, 1 )
 texture_mode = 1064076126
 
-[node name="table" type="Sprite" parent="."]
+[node name="tabua" type="Sprite" parent="."]
 position = Vector2( 638.089, 361.911 )
 scale = Vector2( 0.680227, 0.680227 )
 texture = ExtResource( 2 )
 
-[node name="Snake" type="AnimatedSprite" parent="table"]
-editor/display_folded = true
-visible = false
-position = Vector2( -8.5733, 45.0032 )
-frames = SubResource( 1 )
-
-[node name="reference" type="Sprite" parent="table/Snake"]
-texture = ExtResource( 7 )
-
-[node name="Frog" type="AnimatedSprite" parent="table"]
-editor/display_folded = true
-visible = false
-position = Vector2( -8.5733, 46.2956 )
-frames = SubResource( 2 )
-
-[node name="reference" type="Sprite" parent="table/Frog"]
-texture = ExtResource( 12 )
-
-[node name="Bat" type="AnimatedSprite" parent="table"]
-editor/display_folded = true
-visible = false
-position = Vector2( -8.5733, 46.2956 )
-frames = SubResource( 3 )
-
-[node name="reference" type="Sprite" parent="table/Bat"]
-texture = ExtResource( 17 )
-
-[node name="Spider" type="AnimatedSprite" parent="table"]
-editor/display_folded = true
-visible = false
-position = Vector2( -8.5733, 46.2956 )
-frames = SubResource( 4 )
-
-[node name="reference" type="Sprite" parent="table/Spider"]
-texture = ExtResource( 22 )
-
 [node name="Shelf" type="Sprite" parent="."]
 
-[node name="frog" type="Sprite" parent="Shelf"]
-editor/display_folded = true
-position = Vector2( 1136.84, 106.061 )
-scale = Vector2( 0.191417, 0.223753 )
-texture = ExtResource( 23 )
-script = ExtResource( 24 )
-
-[node name="Button" type="Button" parent="Shelf/frog"]
-margin_left = -405.454
-margin_top = -313.222
-margin_right = 425.546
-margin_bottom = 296.778
+[node name="Button" type="Button" parent="Shelf"]
+margin_left = 1059.0
+margin_top = 36.0
+margin_right = 1215.0
+margin_bottom = 180.0
 flat = true
 
-[node name="bat" type="Sprite" parent="Shelf"]
-editor/display_folded = true
-position = Vector2( 809.482, 110.746 )
+[node name="frog" type="Sprite" parent="Shelf/Button"]
+position = Vector2( 77.6108, 70.0844 )
 scale = Vector2( 0.191417, 0.223753 )
-texture = ExtResource( 23 )
-script = ExtResource( 24 )
+texture = ExtResource( 3 )
 
-[node name="Button" type="Button" parent="Shelf/bat"]
-margin_left = -405.0
-margin_top = -297.0
-margin_right = 405.0
-margin_bottom = 313.0
+[node name="Button2" type="Button" parent="Shelf"]
+margin_left = 732.0
+margin_top = 44.0
+margin_right = 888.0
+margin_bottom = 195.0
 flat = true
 
-[node name="snake" type="Sprite" parent="Shelf"]
-editor/display_folded = true
-position = Vector2( 452.426, 107.731 )
+[node name="bat" type="Sprite" parent="Shelf/Button2"]
+position = Vector2( 77.5239, 66.4546 )
 scale = Vector2( 0.191417, 0.223753 )
-texture = ExtResource( 23 )
-script = ExtResource( 24 )
+texture = ExtResource( 3 )
 
-[node name="Button" type="Button" parent="Shelf/snake"]
-margin_left = -405.0
-margin_top = -307.0
-margin_right = 412.0
-margin_bottom = 303.0
+[node name="Button3" type="Button" parent="Shelf"]
+margin_left = 375.0
+margin_top = 39.0
+margin_right = 528.0
+margin_bottom = 187.0
 flat = true
 
-[node name="spider" type="Sprite" parent="Shelf"]
-editor/display_folded = true
-position = Vector2( 133.013, 96.487 )
+[node name="snake" type="Sprite" parent="Shelf/Button3"]
+position = Vector2( 77.5239, 68.6922 )
 scale = Vector2( 0.191417, 0.223753 )
-texture = ExtResource( 23 )
-script = ExtResource( 24 )
+texture = ExtResource( 3 )
 
-[node name="Button" type="Button" parent="Shelf/spider"]
-margin_left = -405.454
-margin_top = -313.222
-margin_right = 425.546
-margin_bottom = 296.778
+[node name="Button4" type="Button" parent="Shelf"]
+margin_left = 58.0
+margin_top = 26.0
+margin_right = 218.0
+margin_bottom = 191.0
 flat = true
-[connection signal="script_changed" from="Shelf/frog" to="." method="_on_frog_script_changed"]
-[connection signal="button_down" from="Shelf/frog/Button" to="." method="_on_Button_button_down" binds= [ "frog" ]]
-[connection signal="button_down" from="Shelf/frog/Button" to="Shelf/frog" method="_on_Button_button_down"]
-[connection signal="script_changed" from="Shelf/bat" to="." method="_on_frog_script_changed"]
-[connection signal="button_down" from="Shelf/bat/Button" to="." method="_on_Button_button_down" binds= [ "bat" ]]
-[connection signal="button_down" from="Shelf/bat/Button" to="Shelf/bat" method="_on_Button_button_down"]
-[connection signal="script_changed" from="Shelf/snake" to="." method="_on_frog_script_changed"]
-[connection signal="button_down" from="Shelf/snake/Button" to="." method="_on_Button_button_down" binds= [ "snake" ]]
-[connection signal="button_down" from="Shelf/snake/Button" to="Shelf/snake" method="_on_Button_button_down"]
-[connection signal="script_changed" from="Shelf/spider" to="." method="_on_frog_script_changed"]
-[connection signal="button_down" from="Shelf/spider/Button" to="." method="_on_Button_button_down" binds= [ "spider" ]]
-[connection signal="button_down" from="Shelf/spider/Button" to="Shelf/spider" method="_on_Button_button_down"]
+
+[node name="spider" type="Sprite" parent="Shelf/Button4"]
+position = Vector2( 74.6745, 70.0844 )
+scale = Vector2( 0.191417, 0.223753 )
+texture = ExtResource( 3 )
+[connection signal="button_down" from="Shelf/Button" to="." method="_on_Button_button_down"]
+[connection signal="button_down" from="Shelf/Button2" to="." method="_on_Button2_button_down"]
+[connection signal="button_down" from="Shelf/Button3" to="." method="_on_Button3_button_down"]
+[connection signal="button_down" from="Shelf/Button4" to="." method="_on_Button4_button_down"]
