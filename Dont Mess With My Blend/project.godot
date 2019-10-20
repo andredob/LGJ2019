@@ -22,6 +22,7 @@ config/icon="res://icon.png"
 [autoload]
 
 GameManager="*res://Scripts/GameManager.gd"
+ChopTable="*res://Scripts/ChopTable/ChopTable.gd"
 DayAndNightManager="*res://Scripts/Window/DayAndNightManager.gd"
 Armario="*res://Scripts/Armario.gd"
 
@@ -32,6 +33,7 @@ window/size/height=720
 window/size/resizable=false
 window/stretch/aspect="keep"
 
+<<<<<<< HEAD
 [input]
 
 cut={
@@ -40,6 +42,8 @@ cut={
  ]
 }
 
+=======
+>>>>>>> parent of 82b94ba... paper word
 [rendering]
 
 vram_compression/import_etc=true
