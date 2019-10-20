@@ -1,7 +1,0 @@
-[gd_resource type="StyleBoxFlat" format=2]
-
-[resource]
-bg_color = Color( 0.6, 0.6, 0.6, 0.462745 )
-draw_center = false
-shadow_color = Color( 0.992157, 1, 0, 1 )
-shadow_size = 5
