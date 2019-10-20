@@ -1,0 +1,64 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Others/PanelFonte.tres" type="DynamicFont" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color( 1, 1, 1, 0.34902 )
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id=2]
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 0.458824 )
+corner_radius_top_left = 10
+corner_radius_bottom_right = 10
+
+[node name="Pause" type="Panel"]
+visible = false
+margin_left = 509.0
+margin_top = 246.0
+margin_right = 771.0
+margin_bottom = 479.0
+rect_pivot_offset = Vector2( -969.911, -262.819 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="ButtonContinuar" type="Button" parent="."]
+margin_left = 41.0
+margin_top = 69.0
+margin_right = 222.0
+margin_bottom = 130.0
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = ExtResource( 1 )
+text = "Continuar"
+
+[node name="ButtonMenu" type="Button" parent="."]
+margin_left = 16.0
+margin_top = 139.0
+margin_right = 242.0
+margin_bottom = 200.0
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = ExtResource( 1 )
+text = "Sair Para o Menu"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 70.1477
+margin_top = 8.67023
+margin_right = 192.148
+margin_bottom = 55.6702
+custom_fonts/font = ExtResource( 1 )
+text = "Pause"
+align = 1
+valign = 1

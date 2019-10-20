@@ -1,0 +1,77 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scripts/WritingRoom.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Fundos/Lareira.png" type="Texture" id=2]
+[ext_resource path="res://images/Tabletop.png" type="Texture" id=3]
+[ext_resource path="res://images/paper.png" type="Texture" id=4]
+[ext_resource path="res://Others/IndieFlower-Regular.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 350
+outline_color = Color( 0.00392157, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 5 )
+
+[node name="WritingRoom" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="WritingRoomSprite" type="Sprite" parent="."]
+position = Vector2( 639.618, 359.528 )
+scale = Vector2( 0.666174, 0.666174 )
+texture = ExtResource( 2 )
+
+[node name="ButtonTable" type="Button" parent="WritingRoomSprite"]
+margin_left = 347.55
+margin_top = 17.9002
+margin_right = 923.55
+margin_bottom = 383.9
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="ButtonFireplace" type="Button" parent="WritingRoomSprite"]
+margin_left = -584.493
+margin_top = -38.0712
+margin_right = 182.507
+margin_bottom = 410.929
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="Fireplace" type="Sprite" parent="."]
+visible = false
+position = Vector2( 804.553, 216.139 )
+scale = Vector2( 0.932774, 0.932774 )
+texture = ExtResource( 2 )
+
+[node name="Table" type="Node2D" parent="."]
+editor/display_folded = true
+visible = false
+
+[node name="ColorRect3" type="ColorRect" parent="Table"]
+margin_left = -22.0
+margin_top = -22.0
+margin_right = 1312.0
+margin_bottom = 716.0
+color = Color( 1, 1, 1, 0.580392 )
+
+[node name="Table" type="Sprite" parent="Table"]
+position = Vector2( 646.875, 344.681 )
+scale = Vector2( 1.14331, 1.14331 )
+texture = ExtResource( 3 )
+
+[node name="Paper" type="Sprite" parent="Table/Table"]
+position = Vector2( -15.1998, 13.5172 )
+rotation = -0.0754635
+scale = Vector2( 0.322828, 0.322828 )
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Table/Table/Paper"]
+margin_left = -1310.55
+margin_top = -224.474
+margin_right = 1382.45
+margin_bottom = 241.526
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+valign = 1
+[connection signal="button_down" from="WritingRoomSprite/ButtonTable" to="." method="_on_ButtonTable_button_down"]
+[connection signal="button_down" from="WritingRoomSprite/ButtonFireplace" to="." method="_on_ButtonFireplace_button_down"]
