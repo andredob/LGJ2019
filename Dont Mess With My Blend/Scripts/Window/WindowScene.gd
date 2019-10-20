@@ -38,28 +38,35 @@ func _on_ButtonPoCamomila_button_down():
 
 
 func _on_ButtonSemMaracuja_button_down():
+	GameManager.addItemInventario(Armario.itens[1])
 	pass # Replace with function body.
 
 
 func _on_ButtonAguaBanho_button_down():
+	GameManager.addItemInventario(Armario.itens[2])
 	pass # Replace with function body.
 
 
 func _on_ButtonCristal_button_down():
+	GameManager.addItemInventario(Armario.itens[3])
 	pass # Replace with function body.
 
 
 func _on_ButtonPoGuarana_button_down():
+	GameManager.addItemInventario(Armario.itens[4])
 	pass # Replace with function body.
 
 
 func _on_ButtonSemPapoula_button_down():
+	GameManager.addItemInventario(Armario.itens[5])
 	pass # Replace with function body.
 
 
 func _on_ButtonSuorGamer_button_down():
+	GameManager.addItemInventario(Armario.itens[6])
 	pass # Replace with function body.
 
 
 func _on_ButtonCalcio_button_down():
+	GameManager.addItemInventario(Armario.itens[7])
 	pass # Replace with function body.

@@ -20,10 +20,10 @@ var screens = [
 ]
 
 var inventario = [
-{"nome": "", "sprite": null, "qtd": 0, "tipo": "", "valor":""},
-{"nome": "", "sprite": null, "qtd": 0, "tipo": "", "valor":""},
-{"nome": "", "sprite": null, "qtd": 0, "tipo": "", "valor":""},
-{"nome": "", "sprite": null, "qtd": 0, "tipo": "", "valor":""}, 
+{"nome": "", "sprite": null, "tipo":"", "tamanho" : 0},
+{"nome": "", "sprite": null, "tipo":"", "tamanho" : 0},
+{"nome": "", "sprite": null, "tipo":"", "tamanho" : 0},
+{"nome": "", "sprite": null, "tipo":"", "tamanho" : 0}, 
 ]
 
 func addItemInventario(itemExterno):
