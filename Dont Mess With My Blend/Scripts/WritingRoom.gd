@@ -8,6 +8,8 @@ onready var WritingRoomSprite = get_node("WritingRoomSprite")
 onready var fireplace = get_node("Fireplace")
 onready var table = get_node("Table")
 
+onready var icon = get_node("Table/Table/Paper")
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_process(true)
@@ -20,10 +22,12 @@ func _process(delta):
 func _unhandled_input(event):
 	if event is InputEventKey:
 		if event.pressed:
-			print(event.scancode)
 			if(event.scancode == 16777222 or event.scancode == 16777221):
-				print("enviou o texto "+paperLabel.text)
-				#Mandar o texto para o tratamento das Runas
+				print("texto enviado para inventário "+paperLabel.text)
+				GameManager.inventario[3] = {"nome": "Papel Escrito", "sprite": icon.texture, "qtd": 1, "value": paperLabel.text}
+				WritingRoomSprite.visible = true
+				fireplace.visible = false
+				table.visible = false
 			elif(event.scancode == 16777217):
 				paperLabel.text = ""
 				WritingRoomSprite.visible = true

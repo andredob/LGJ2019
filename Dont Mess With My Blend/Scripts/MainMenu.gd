@@ -18,7 +18,7 @@ func _process(delta):
 func _on_ButtonJogar_button_down():
 	get_tree().change_scene("res://Scenes/Game.tscn")
 	pass # Replace with function body.
-
+ 
 
 func _on_ButtonSair_button_down():
 	get_tree().quit()
