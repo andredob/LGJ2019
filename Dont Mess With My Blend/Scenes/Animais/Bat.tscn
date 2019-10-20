@@ -1,0 +1,78 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Bat.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/ChopTable/Bat/MorcegoAmareloBola.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Runa.png" type="Texture" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 45.0
+
+[node name="Bat" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+
+[node name="MorcegoMarronListra" type="Sprite" parent="."]
+position = Vector2( -5, 0 )
+texture = ExtResource( 2 )
+
+[node name="cabeca" type="Area2D" parent="."]
+position = Vector2( 0, -110.348 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cabeca"]
+shape = SubResource( 1 )
+
+[node name="Runa" type="Sprite" parent="cabeca"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="ombro" type="Area2D" parent="."]
+position = Vector2( -60.3885, -30.4794 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ombro"]
+shape = SubResource( 1 )
+
+[node name="Runa" type="Sprite" parent="ombro"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="asaI" type="Area2D" parent="."]
+position = Vector2( -89.6088, 158.478 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="asaI"]
+shape = SubResource( 1 )
+
+[node name="Runa" type="Sprite" parent="asaI"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="asaI2" type="Area2D" parent="."]
+position = Vector2( 78.5783, 166.411 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="asaI2"]
+shape = SubResource( 1 )
+
+[node name="Runa" type="Sprite" parent="asaI2"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="barriga" type="Area2D" parent="."]
+position = Vector2( 73.5089, 1.5921 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="barriga"]
+shape = SubResource( 1 )
+
+[node name="Runa" type="Sprite" parent="barriga"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+[connection signal="mouse_entered" from="cabeca" to="." method="_on_cabeca_mouse_entered"]
+[connection signal="mouse_entered" from="ombro" to="." method="_on_ombro_mouse_entered"]
+[connection signal="mouse_entered" from="asaI" to="." method="_on_asaI_mouse_entered"]
+[connection signal="mouse_entered" from="asaI2" to="." method="_on_asaI2_mouse_entered"]
+[connection signal="mouse_entered" from="barriga" to="." method="_on_barriga_mouse_entered"]

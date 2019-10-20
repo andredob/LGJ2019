@@ -9,6 +9,7 @@ onready var camera = get_node("Camera2D")
 func _ready():
 	set_process(true)
 	print(GameManager.regras.setup)
+	print(GameManager.regras.get_quantidade(Armario.itens[0]))
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -119,5 +119,12 @@ func get_animais(anel):
 	pass
 func get_frasco(runa,dia):
 	pass
+func get_quantidade(item):
+	if setup.periodo == 0:
+		return item.tamanho - (item.tamanho/(setup.hora+1))
+	else:
+		return item.tamanho - (item.tamanho/(setup.lua+1))
+	
+	pass
 
 
