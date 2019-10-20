@@ -19,9 +19,7 @@ var inventario = [
 {"nome": "Perna esquerda de sapo", "sprite": defaultIcon, "qtd": 1}, 
 ]
 
-func _ready():
-	print(regras.setup)
-	pass
+
 	
 	
 	
