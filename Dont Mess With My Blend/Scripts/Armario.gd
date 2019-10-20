@@ -1,3 +1,11 @@
 extends Node
-const itens = ["Pó de camumila", "Semente de maraujá", "Agua de banho", "Cristal","Pó de guaraná", "Semente de Papoula",
-"Suor de gamer","Calcio"]
+
+var itens = [
+{"nome": "Pó de camumila", "sprite": defaultIcon},
+{"nome": "Semente de maraujá", "sprite": defaultIcon},
+{"nome": "Agua de banho", "sprite": defaultIcon},
+{"nome": "Pó de guaraná", "sprite": defaultIcon},
+{"nome": "Semente de Papoula", "sprite": defaultIcon},
+{"nome": "Suor de gamer", "sprite": defaultIcon},
+{"nome": "Calcio", "sprite": defaultIcon}
+]
