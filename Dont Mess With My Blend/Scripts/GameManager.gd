@@ -5,6 +5,7 @@ onready var regras = preload("res://Scripts/setup.gd").new()
 onready var animais = preload("res://Scripts/Animais.gd").new()
 
 var canShowControls = true
+var caldeiraoTemperatura = 137
 
 var barraDeQualidade = 100
 
