@@ -109,7 +109,8 @@ texture = ExtResource( 22 )
 [node name="Shelf" type="Sprite" parent="."]
 
 [node name="frog" type="Sprite" parent="Shelf"]
-position = Vector2( 1194.12, 72.8998 )
+editor/display_folded = true
+position = Vector2( 1136.84, 106.061 )
 scale = Vector2( 0.191417, 0.223753 )
 texture = ExtResource( 23 )
 script = ExtResource( 24 )
@@ -122,7 +123,8 @@ margin_bottom = 296.778
 flat = true
 
 [node name="bat" type="Sprite" parent="Shelf"]
-position = Vector2( 928.562, 74.57 )
+editor/display_folded = true
+position = Vector2( 809.482, 110.746 )
 scale = Vector2( 0.191417, 0.223753 )
 texture = ExtResource( 23 )
 script = ExtResource( 24 )
@@ -135,7 +137,8 @@ margin_bottom = 313.0
 flat = true
 
 [node name="snake" type="Sprite" parent="Shelf"]
-position = Vector2( 621.248, 74.57 )
+editor/display_folded = true
+position = Vector2( 452.426, 107.731 )
 scale = Vector2( 0.191417, 0.223753 )
 texture = ExtResource( 23 )
 script = ExtResource( 24 )
@@ -148,7 +151,8 @@ margin_bottom = 303.0
 flat = true
 
 [node name="spider" type="Sprite" parent="Shelf"]
-position = Vector2( 328.967, 82.9209 )
+editor/display_folded = true
+position = Vector2( 133.013, 96.487 )
 scale = Vector2( 0.191417, 0.223753 )
 texture = ExtResource( 23 )
 script = ExtResource( 24 )
