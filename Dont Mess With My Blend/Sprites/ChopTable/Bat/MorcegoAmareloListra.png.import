@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/MorcegoMarronBola.png-2f8340f4893a228eedd74ed1ab4a3c67.stex"
+path="res://.import/MorcegoAmareloListra.png-0fc420dc2f65f2a046d4535e3625d611.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Bat/MorcegoMarronBola.png"
-dest_files=[ "res://.import/MorcegoMarronBola.png-2f8340f4893a228eedd74ed1ab4a3c67.stex" ]
+source_file="res://Sprites/ChopTable/Bat/MorcegoAmareloListra.png"
+dest_files=[ "res://.import/MorcegoAmareloListra.png-0fc420dc2f65f2a046d4535e3625d611.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/AranhaMarromListras.png-d9004c36d29c22a5d1a47a2d057b7f73.stex"
+path="res://.import/AranhaAmarelaBolinhas.png-5fb9cabc9b6dd55a9a92b062d3259904.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Spider/AranhaMarromListras.png"
-dest_files=[ "res://.import/AranhaMarromListras.png-d9004c36d29c22a5d1a47a2d057b7f73.stex" ]
+source_file="res://Sprites/ChopTable/Spider/AranhaAmarelaBolinhas.png"
+dest_files=[ "res://.import/AranhaAmarelaBolinhas.png-5fb9cabc9b6dd55a9a92b062d3259904.stex" ]
 
 [params]
 

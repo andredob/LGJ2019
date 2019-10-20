@@ -15,6 +15,9 @@ var prevPoint = Vector2(0,0)
 var dist = 0
 var actualPoint
 
+#distance for all types of cuts
+var perfectDistance = 300
+
 #calculate the distance between two points and add a new point to the cut
 func _process(delta):
 	actualPoint = get_global_mouse_position()
@@ -25,27 +28,27 @@ func _process(delta):
 			get_child(0).add_point(actualPoint)
 			dist = dist + prevPoint.distance_to(actualPoint)
 	else:
+		if  get_child(0) != null:
+			if dist >= (perfectDistance*0.2) or dist <= perfectDistance:
+				#ERROU!!!
+				pass
+			get_child(0).clear_points()
 		pass
 	pass
-
 
 #makes that just when the mouse is pressed is possible to cut
 func _input(event):
 	if Input.is_action_just_pressed("Cut") and cutting:
-		print(get_global_mouse_position())
 		cut = true
 	elif Input.is_action_just_released("Cut") or not cutting:
 		cut = false
 	pass
-	
-
 
 #randonly select the sprite to be show for the selected animal
 func _on_Button_button_down(animalName):
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
 	var rand = rng.randi_range(0,4)
-	print(rand)
 	if animalName == "frog":
 		get_node(frogPath).frame = rand
 		get_node(frogPath).visible = true
@@ -59,5 +62,10 @@ func _on_Button_button_down(animalName):
 		get_node(spiderPath).frame = rand
 		get_node(spiderPath).visible = true
 	cutting = true
+	_disable_shelf_itens()
 	pass
+
+func _disable_shelf_itens():
+	for children in get_node("Shelf").get_children():
+		children.get_child(0).disabled = true
 

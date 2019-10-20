@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/AzulBola.png-4f1665441f12055c5765c7767069bb35.stex"
+path="res://.import/MorcegoMarronBola.png-c523bd084804fff61a7a7aba1f08cca5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Frog/AzulBola.png"
-dest_files=[ "res://.import/AzulBola.png-4f1665441f12055c5765c7767069bb35.stex" ]
+source_file="res://Sprites/ChopTable/Bat/MorcegoMarronBola.png"
+dest_files=[ "res://.import/MorcegoMarronBola.png-c523bd084804fff61a7a7aba1f08cca5.stex" ]
 
 [params]
 

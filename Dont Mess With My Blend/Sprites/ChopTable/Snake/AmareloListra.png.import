@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/AzulBola.png-c24b343e0c90b1b5f26a0b6a692a0a86.stex"
+path="res://.import/AmareloListra.png-bf18288f99ac97ed3f40279d7b96472f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Snake/AzulBola.png"
-dest_files=[ "res://.import/AzulBola.png-c24b343e0c90b1b5f26a0b6a692a0a86.stex" ]
+source_file="res://Sprites/ChopTable/Snake/AmareloListra.png"
+dest_files=[ "res://.import/AmareloListra.png-bf18288f99ac97ed3f40279d7b96472f.stex" ]
 
 [params]
 
