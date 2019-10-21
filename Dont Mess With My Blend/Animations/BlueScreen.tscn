@@ -1,13 +1,13 @@
 [gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Animations/BlueScreen.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/BlueScreen/image2vector.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/BlueScreen/download (2).png" type="Texture" id=3]
-[ext_resource path="res://Sprites/BlueScreen/erro.wav" type="AudioStream" id=4]
-[ext_resource path="res://Sounds/GameTheme.wav" type="AudioStream" id=5]
-[ext_resource path="res://Others/MenuLogoFont.tres" type="DynamicFont" id=6]
-[ext_resource path="res://Others/PanelFonte.tres" type="DynamicFont" id=7]
-[ext_resource path="res://Sprites/Fundos/Caldeirao.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Fundos/Caldeirao.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/BlueScreen/image2vector.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/BlueScreen/download (2).png" type="Texture" id=4]
+[ext_resource path="res://Sprites/BlueScreen/erro.wav" type="AudioStream" id=5]
+[ext_resource path="res://Sounds/GameTheme.wav" type="AudioStream" id=6]
+[ext_resource path="res://Others/MenuLogoFont.tres" type="DynamicFont" id=7]
+[ext_resource path="res://Others/PanelFonte.tres" type="DynamicFont" id=8]
 [ext_resource path="res://Sprites/UI/Small.png" type="Texture" id=9]
 
 [sub_resource type="Animation" id=1]
@@ -190,61 +190,66 @@ region_rect = Rect2( 0, 0, 800, 800 )
 position = Vector2( 728.795, 387.172 )
 script = ExtResource( 1 )
 
+[node name="Caldeirao" type="Sprite" parent="."]
+position = Vector2( -79.344, -31.7579 )
+scale = Vector2( 0.674645, 0.674645 )
+texture = ExtResource( 2 )
+
 [node name="image2vector" type="Sprite" parent="."]
 position = Vector2( 4.65417, 30.772 )
 scale = Vector2( 0.490492, 0.490492 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="image2vector2" type="Sprite" parent="."]
 position = Vector2( -28.1545, 4.11487 )
 scale = Vector2( 0.490492, 0.490492 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="image2vector3" type="Sprite" parent="."]
 visible = false
 position = Vector2( -62.6901, -30.4207 )
 scale = Vector2( 0.490492, 0.490492 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="image2vector4" type="Sprite" parent="."]
 visible = false
 position = Vector2( -90.7501, -56.3223 )
 scale = Vector2( 0.490492, 0.490492 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="image2vector5" type="Sprite" parent="."]
 visible = false
 position = Vector2( -129.603, -88.6994 )
 scale = Vector2( 0.490492, 0.490492 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="image2vector6" type="Sprite" parent="."]
 visible = false
 position = Vector2( -166.296, -118.918 )
 scale = Vector2( 0.490492, 0.490492 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="BlueSprite" type="Sprite" parent="."]
 visible = false
 position = Vector2( -58.1609, -16.8362 )
 scale = Vector2( 0.349383, 0.344599 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "BlueScreeAnim"
 anims/BlueScreeAnim = SubResource( 1 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 4 )
+stream = ExtResource( 5 )
 
 [node name="music" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 5 )
+stream = ExtResource( 6 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_left = -740.0
-margin_top = -390.0
+margin_top = -388.242
 margin_right = 558.0
-margin_bottom = 3055.0
+margin_bottom = 3056.76
 color = Color( 0, 0, 0, 1 )
 
 [node name="Slack" type="ColorRect" parent="ColorRect"]
@@ -262,7 +267,7 @@ margin_left = -383.5
 margin_top = -1448.44
 margin_right = 383.5
 margin_bottom = -1327.44
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 7 )
 text = "Obrigado por jogar Don't Mess With My Blend!"
 align = 1
 autowrap = true
@@ -278,7 +283,7 @@ margin_left = -370.0
 margin_top = -1241.94
 margin_right = 379.0
 margin_bottom = -1137.94
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 8 )
 text = "Esse é o final...
 Tudo que foi feito nas 48 horas da Livre Game Jam"
 align = 1
@@ -296,7 +301,7 @@ margin_left = 266.0
 margin_top = 809.0
 margin_right = 1033.0
 margin_bottom = 875.0
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 7 )
 text = "CRÉDITOS"
 align = 1
 autowrap = true
@@ -314,7 +319,7 @@ margin_left = 266.0
 margin_top = 950.923
 margin_right = 1033.0
 margin_bottom = 1016.92
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 7 )
 text = "assets externos"
 align = 1
 autowrap = true
@@ -340,7 +345,7 @@ margin_left = 551.259
 margin_top = 1099.87
 margin_right = 738.259
 margin_bottom = 1125.87
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 8 )
 text = "FONTES"
 align = 1
 
@@ -354,7 +359,7 @@ margin_left = 279.0
 margin_top = 1156.05
 margin_right = 1028.0
 margin_bottom = 1211.05
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 8 )
 text = "Astigmatic - Font Luckiest Guy
 Milena Brandao - Font Fredoka One"
 align = 1
@@ -368,7 +373,7 @@ margin_left = 551.259
 margin_top = 1282.2
 margin_right = 738.259
 margin_bottom = 1308.2
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 8 )
 text = "IMAGENS"
 align = 1
 
@@ -382,7 +387,7 @@ margin_left = 279.0
 margin_top = 1338.38
 margin_right = 1028.0
 margin_bottom = 1393.38
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 8 )
 text = "inspiriterz - Image Alchemy Circle
 "
 align = 1
@@ -396,7 +401,7 @@ margin_left = 551.259
 margin_top = 1456.37
 margin_right = 749.259
 margin_bottom = 1482.37
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 8 )
 text = "Efeitos Sonoros"
 align = 1
 
@@ -410,7 +415,7 @@ margin_left = 279.0
 margin_top = 1512.55
 margin_right = 1028.0
 margin_bottom = 1567.55
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 8 )
 text = "Youtube audio library"
 align = 1
 
@@ -426,7 +431,7 @@ margin_left = 266.0
 margin_top = 950.923
 margin_right = 1033.0
 margin_bottom = 1016.92
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 7 )
 text = "Desenvolvimento"
 align = 1
 autowrap = true
@@ -452,7 +457,7 @@ margin_left = 553.207
 margin_top = 1111.67
 margin_right = 740.207
 margin_bottom = 1137.67
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 8 )
 text = "Programação"
 align = 1
 
@@ -466,7 +471,7 @@ margin_left = 279.0
 margin_top = 1167.85
 margin_right = 1028.0
 margin_bottom = 1222.85
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 8 )
 text = "André Dobermann - Michael Vivaldini - Tácio Barreto"
 align = 1
 
@@ -476,10 +481,10 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = 518.142
-margin_top = 1285.83
+margin_top = 1640.97
 margin_right = 791.142
-margin_bottom = 1311.83
-custom_fonts/font = ExtResource( 7 )
+margin_bottom = 1666.97
+custom_fonts/font = ExtResource( 8 )
 text = "Arte Design"
 align = 1
 
@@ -490,10 +495,10 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = 279.0
-margin_top = 1342.01
+margin_top = 1697.15
 margin_right = 1028.0
-margin_bottom = 1397.01
-custom_fonts/font = ExtResource( 7 )
+margin_bottom = 1752.15
+custom_fonts/font = ExtResource( 8 )
 text = "Daniel Quevedo"
 align = 1
 
@@ -506,7 +511,7 @@ margin_left = 518.142
 margin_top = 1457.77
 margin_right = 791.142
 margin_bottom = 1483.77
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 8 )
 text = "Musica Tema"
 align = 1
 
@@ -520,7 +525,7 @@ margin_left = 279.0
 margin_top = 1513.95
 margin_right = 1028.0
 margin_bottom = 1568.95
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 8 )
 text = "Pablo de moraes"
 align = 1
 
@@ -530,10 +535,10 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = 518.142
-margin_top = 1634.12
+margin_top = 1270.19
 margin_right = 791.142
-margin_bottom = 1660.12
-custom_fonts/font = ExtResource( 7 )
+margin_bottom = 1296.19
+custom_fonts/font = ExtResource( 8 )
 text = "UI"
 align = 1
 
@@ -544,10 +549,10 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = 279.0
-margin_top = 1690.3
+margin_top = 1324.61
 margin_right = 1028.0
-margin_bottom = 1745.3
-custom_fonts/font = ExtResource( 7 )
+margin_bottom = 1379.61
+custom_fonts/font = ExtResource( 8 )
 text = "Michael Vivaldini"
 align = 1
 
@@ -560,7 +565,7 @@ margin_left = 294.853
 margin_top = 1830.6
 margin_right = 988.853
 margin_bottom = 2013.6
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 7 )
 text = "Obrigado por jogar
  Don't Mess With My Blend!"
 align = 1
@@ -575,7 +580,7 @@ margin_left = 860.565
 margin_top = 2099.49
 margin_right = 1047.56
 margin_bottom = 2125.49
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 8 )
 text = "Time"
 align = 1
 
@@ -589,7 +594,7 @@ margin_left = 588.306
 margin_top = 2155.66
 margin_right = 1337.31
 margin_bottom = 2326.66
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 8 )
 text = "André Dobermann   -   Programação
 Daniel Quevedo   -   Arte Design
 Michael Vivaldini   -   UI/Programação
@@ -600,7 +605,7 @@ align = 1
 [node name="Sprite" type="Sprite" parent="ColorRect/Créditos"]
 position = Vector2( 357.394, 2964.69 )
 scale = Vector2( 0.254719, 0.254719 )
-texture = ExtResource( 8 )
+texture = ExtResource( 2 )
 
 [node name="TouchScreenButton" type="Button" parent="ColorRect"]
 margin_left = 535.517
@@ -620,7 +625,7 @@ margin_top = -22.6047
 margin_right = 90.4756
 margin_bottom = 32.3953
 mouse_default_cursor_shape = 2
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 8 )
 text = "Menu Principal"
 align = 1
 autowrap = true
