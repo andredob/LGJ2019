@@ -18,7 +18,7 @@ func _ready():
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(delta):	
 	if(GameManager.caldeiraoItems.size()!=oldCaldeiraoLenght):
 		oldCaldeiraoLenght = GameManager.caldeiraoItems.size()
 		caldeiraoClip.play()

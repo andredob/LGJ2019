@@ -31,7 +31,19 @@ var inventario = [
 {"nome": "", "sprite": null, "tipo":"", "tamanho" : 0},
 {"nome": "", "sprite": null, "tipo":"", "tamanho" : 0}, 
 ]
+
+var ingrediente = 0
+var parte = 0
+
 func addItemCaldeirao(itemExterno):
+	if(itemExterno.tipo == "ingrediente"):
+		ingrediente+=1
+	elif(itemExterno.tipo == "parte"):
+		parte+=1
+		
+	if(GameManager.ingrediente > 3 and GameManager.parte > 3):
+		get_tree().change_scene("res://Animations/BlueScreen.tscn")
+		
 	caldeiraoItems.append(itemExterno)
 	pass
 	

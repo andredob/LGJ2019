@@ -110,7 +110,7 @@ mouse_default_cursor_shape = 2
 custom_styles/hover = SubResource( 5 )
 custom_styles/normal = SubResource( 4 )
 custom_fonts/font = ExtResource( 4 )
-text = "Credits"
+text = "Créditos"
 
 [node name="ButtonSair" type="Button" parent="Panel"]
 margin_left = 54.7382

@@ -34,5 +34,5 @@ func _on_ButtonSair_button_down():
 
 
 func _on_ButtonCreditos_button_down():
-	#chamar scena de créditos
+	get_tree().change_scene("res://Animations/BlueScreen.tscn")
 	pass # Replace with function body.
