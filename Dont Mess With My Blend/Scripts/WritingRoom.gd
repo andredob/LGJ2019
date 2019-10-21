@@ -30,9 +30,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if(GameManager.showRuna and GameManager.screenCamera == "lareira"):
-		oldRuna = GameManager.regras.setup.runa
-		surgeRuna.get_node("Runa").texture = runas[GameManager.regras.setup.runa]
+	if(GameManager.showRuna and GameManager.screenCamera == "lareira" and GameManager.regras.setup.runaEscolhida!= null):
+		oldRuna = GameManager.regras.setup.runaEscolhida
+		surgeRuna.get_node("Runa").texture = runas[GameManager.regras.setup.runaEscolhida]
 		surgeRuna.visible = true
 		surgeRuna.get_node("AnimationPlayer").play("BrilhoAnim")
 		GameManager.showRuna = false

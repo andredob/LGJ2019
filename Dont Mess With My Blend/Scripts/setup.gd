@@ -8,7 +8,7 @@ extends Node
 #runa: 0-5
 
 var setup = {
-"umidade":0,"periodo": 0, "anel" : 0, "hora":0 , "lua": 0, "runa": 0 , "palavra": "","temperatura" : 0,"item_sequencia": [],
+"umidade":0,"periodo": 0, "anel" : 0, "hora":0 , "lua": 0, "runa": 0, "runaEscolhida": null, "palavra": "","temperatura" : 0,"item_sequencia": [],
 "animais" : [],"frasco" :0}
 
 func _init():

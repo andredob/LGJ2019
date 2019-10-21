@@ -101,10 +101,13 @@ func jogar_papel(papel):
 	
 	if typeof(runa) != TYPE_BOOL:
 		print(runa)
+		GameManager.regras.setup.runaEscolhida = GameManager.regras.setup.runa
 		GameManager.showRuna = true
 		#executar animação da Runa
 		print("runa certa")
 	else : 
+		randomize()
+		GameManager.regras.setup.runaEscolhida = rand_range(5,7)
 		GameManager.showRuna = true
 		#executar animação de Runa falha
 		print("runa errada")
